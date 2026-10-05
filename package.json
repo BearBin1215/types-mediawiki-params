@@ -61,7 +61,14 @@
     "format": "oxfmt",
     "format:check": "oxfmt --check",
     "test": "pnpm run typecheck",
-    "prepublishOnly": "pnpm run build"
+    "prepublishOnly": "pnpm run build",
+    "bootstrap:registry": "tsx scripts/bootstrap-registry.ts",
+    "fetch:paraminfo": "tsx scripts/fetch-paraminfo.ts",
+    "audit:paraminfo": "tsx scripts/audit-paraminfo.ts && tsx scripts/audit-paraminfo.ts --ext",
+    "fetch:paraminfo:ext": "tsx scripts/fetch-ext-paraminfo.ts",
+    "bootstrap:extensions": "tsx scripts/bootstrap-extensions.ts",
+    "check:ext": "tsx scripts/check-ext-consumer.ts",
+    "scratch:install": "tsx scripts/install-scratch.ts"
   },
   "devDependencies": {
     "@types/node": "^26.6.3",
@@ -71,7 +78,8 @@
     "tsx": "^4.23.13",
     "types-mediawiki": "^2.1.0",
     "types-mediawiki-response": "^1.0.0",
-    "typescript": "^7.0.2"
+    "typescript": "^7.0.2",
+    "typescript5": "npm:typescript@5.9.3"
   },
   "engines": {
     "node": ">=20"
