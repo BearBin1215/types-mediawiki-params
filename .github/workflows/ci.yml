@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  # Full dev-toolchain gate, same as local `pnpm check` + `pnpm check:pack`.
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Enable corepack
+        run: corepack enable
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Check (format, lint, type tests, paraminfo audits, ext consumer harness)
+        run: pnpm run check
+      - name: Pack check (build + are-the-types-wrong)
+        run: pnpm run check:pack
