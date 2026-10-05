@@ -1,6 +1,6 @@
 {
   "name": "types-mediawiki-params",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0",
   "description": "TypeScript type definitions for MediaWiki Action API request parameters",
   "keywords": [
     "action-api",
