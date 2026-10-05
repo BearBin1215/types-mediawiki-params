@@ -46,19 +46,33 @@ const BASE_TSCONFIG = {
   },
 };
 
-/** Run tsc on a consumer tsconfig; return whether it type-checked clean. */
-function check(name: string, include: string[]): boolean {
+/**
+ * Run tsc on a consumer tsconfig; return whether it type-checked clean.
+ *
+ * `expect` is what the case pins — the isolation checks MUST fail to compile.
+ * The captured compiler output is echoed only when the result is unexpected: a
+ * deliberate failure must never print a `file(l,c): error TS…` line, because
+ * `actions/setup-node` registers the `tsc` problem matcher for the whole job
+ * (`^([^\s].*)[\(:](\d+)[,:](\d+)(?:\):\s+|\s+-\s+)(error|warning|info)\s+TS\d+\s*:\s*(.*)$`).
+ * The runner turns every matching line into a GitHub error annotation, and an
+ * annotation does not fail the step — exit codes do — so the expected failure
+ * shows up as a red annotation on an otherwise green run. Prefixing the line
+ * does not help: the file group matches anything up to `(l,c)`.
+ */
+function check(name: string, include: string[], expect: "clean" | "fails"): boolean {
   const cfg = join(DIR, `tsconfig.${name}.json`);
   writeFileSync(cfg, JSON.stringify({ ...BASE_TSCONFIG, include }, null, 2));
   try {
     execFileSync(process.execPath, [TSC, "-p", cfg], { cwd: DIR, stdio: "pipe" });
     return true;
   } catch (err) {
-    console.error(String(err instanceof Error ? err.message : err).slice(0, 2000));
-    const stdout = (err as { stdout?: Buffer }).stdout;
-    const stderr = (err as { stderr?: Buffer }).stderr;
-    if (stdout) console.error(stdout.toString().slice(0, 2000));
-    if (stderr) console.error(stderr.toString().slice(0, 2000));
+    if (expect === "clean") {
+      console.error(String(err instanceof Error ? err.message : err).slice(0, 2000));
+      const stdout = (err as { stdout?: Buffer }).stdout;
+      const stderr = (err as { stderr?: Buffer }).stderr;
+      if (stdout) console.error(stdout.toString().slice(0, 2000));
+      if (stderr) console.error(stderr.toString().slice(0, 2000));
+    }
     return false;
   }
 }
@@ -177,14 +191,14 @@ apiQuery({ action: "query", list: "checkuser", curequest: "ipusers", cutoken: "x
 `,
 );
 
-const coreIsolated = !check("core", ["core.ts"]);
-const emptyImport = check("empty-import", ["empty-import.ts"]);
-const namedImport = check("named-import", ["named-import.ts"]);
-const specific = check("specificity", ["specificity.ts"]);
-const consumer = check("consumer", ["consumer.ts", "consumer-aug.d.ts"]);
+const coreIsolated = !check("core", ["core.ts"], "fails");
+const emptyImport = check("empty-import", ["empty-import.ts"], "clean");
+const namedImport = check("named-import", ["named-import.ts"], "clean");
+const specific = check("specificity", ["specificity.ts"], "clean");
+const consumer = check("consumer", ["consumer.ts", "consumer-aug.d.ts"], "clean");
 // Clean compile = the @ts-expect-error suppressed the unknown-module error =
 // the augmentation did NOT apply through the bare reference.
-const referenceLimited = check("reference", ["reference.ts"]);
+const referenceLimited = check("reference", ["reference.ts"], "clean");
 
 // (vii) emit: the type-only import is erased — no runtime import in output.
 writeFileSync(
