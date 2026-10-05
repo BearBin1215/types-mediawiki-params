@@ -16,18 +16,58 @@
     "type": "git",
     "url": "git+https://github.com/BearBin1215/types-mediawiki-params.git"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "README.zh.md"
+  ],
+  "sideEffects": false,
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "define": [
+        "dist/define.d.cts"
+      ],
+      "ext/*": [
+        "dist/extensions/*.d.ts"
+      ]
+    }
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts"
+    },
+    "./define": {
+      "import": {
+        "types": "./dist/define.d.mts",
+        "default": "./dist/define.mjs"
+      },
+      "require": {
+        "types": "./dist/define.d.cts",
+        "default": "./dist/define.cjs"
+      }
+    },
+    "./ext/*": {
+      "types": "./dist/extensions/*.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
   "scripts": {
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "build": "pnpm run clean && tsc -p tsconfig.build.json && tsc src/define.ts --ignoreConfig --target es2022 --module esnext --moduleResolution bundler --skipLibCheck --outDir dist && tsc src/define.ts --ignoreConfig --target es2022 --module commonjs --skipLibCheck --outDir dist-cjs && tsx scripts/prune-dist.ts",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
     "format": "oxfmt",
     "format:check": "oxfmt --check",
-    "test": "pnpm run typecheck"
+    "test": "pnpm run typecheck",
+    "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
     "@types/node": "^26.6.3",
     "oxfmt": "0.71.0",
     "oxlint": "1.86.0",
+    "tsx": "^4.23.13",
     "types-mediawiki": "^2.1.0",
     "typescript": "^7.0.2"
   },

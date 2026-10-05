@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "lib": ["ES2022", "DOM"],
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "removeComments": false,
+    "stripInternal": true,
+    "types": [],
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "src/with-response.ts", "src/mw.ts"]
+}
