@@ -65,12 +65,16 @@
     "bootstrap:registry": "tsx scripts/bootstrap-registry.ts",
     "fetch:paraminfo": "tsx scripts/fetch-paraminfo.ts",
     "audit:paraminfo": "tsx scripts/audit-paraminfo.ts && tsx scripts/audit-paraminfo.ts --ext",
+    "check": "pnpm run format:check && pnpm run lint && pnpm run test && pnpm run audit:paraminfo && pnpm run check:ext && pnpm run check:pack && pnpm run check:surface",
+    "check:pack": "pnpm run build && attw --pack .",
+    "check:surface": "tsx scripts/check-publish-surface.ts",
     "fetch:paraminfo:ext": "tsx scripts/fetch-ext-paraminfo.ts",
     "bootstrap:extensions": "tsx scripts/bootstrap-extensions.ts",
     "check:ext": "tsx scripts/check-ext-consumer.ts",
     "scratch:install": "tsx scripts/install-scratch.ts"
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "0.18.5",
     "@types/node": "^26.6.3",
     "expect-type": "1.4.0",
     "oxfmt": "0.71.0",
