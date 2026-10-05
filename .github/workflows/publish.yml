@@ -1,0 +1,40 @@
+name: Publish
+on:
+  push:
+    tags: ["v*"]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    environment: npm-release
+
+    permissions:
+      contents: write
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Enable corepack
+        run: corepack enable
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - run: pnpm run check
+
+      - run: npm install -g npm@^11
+
+      - run: npm publish
+
+      - name: Create GitHub Release
+        run: pnpm exec changelogithub
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
