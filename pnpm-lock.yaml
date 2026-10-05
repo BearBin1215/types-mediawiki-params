@@ -11,6 +11,9 @@ importers:
       '@types/node':
         specifier: ^26.6.3
         version: 26.6.4
+      expect-type:
+        specifier: 1.4.0
+        version: 1.4.0
       oxfmt:
         specifier: 0.71.0
         version: 0.71.0
@@ -572,6 +575,10 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
+  expect-type@1.4.0:
+    resolution: {integrity: sha512-KfYbmpRm0VbLjEvVa9yGwCi9GI34xvi7A/HXYWQO65CSD2u3MczUJSuwXKFIxlGsgBQizV9q5J9NHj4VG0n+pA==}
+    engines: {node: '>=12.0.0'}
+
   fsevents@2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
@@ -934,6 +941,8 @@ snapshots:
       '@esbuild/win32-arm64': 0.28.2
       '@esbuild/win32-ia32': 0.28.2
       '@esbuild/win32-x64': 0.28.2
+
+  expect-type@1.4.0: {}
 
   fsevents@2.3.3:
     optional: true
