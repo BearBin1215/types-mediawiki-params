@@ -1,0 +1,6269 @@
+{
+  "generator": "MediaWiki 1.43.9",
+  "main": {
+    "name": "main",
+    "classname": "MediaWiki\\Api\\ApiMain",
+    "path": "main",
+    "prefix": "",
+    "source": "MediaWiki",
+    "sourcename": "MediaWiki",
+    "licensetag": "GPL-2.0-or-later",
+    "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+    "helpurls": [],
+    "parameters": [
+      {
+        "index": 1,
+        "name": "action",
+        "type": [
+          "acquiretempusername",
+          "block",
+          "changeauthenticationdata",
+          "changecontentmodel",
+          "checktoken",
+          "clearhasmsg",
+          "clientlogin",
+          "compare",
+          "createaccount",
+          "delete",
+          "edit",
+          "emailuser",
+          "expandtemplates",
+          "feedcontributions",
+          "feedrecentchanges",
+          "feedwatchlist",
+          "filerevert",
+          "help",
+          "imagerotate",
+          "import",
+          "linkaccount",
+          "login",
+          "logout",
+          "managetags",
+          "mergehistory",
+          "move",
+          "opensearch",
+          "options",
+          "paraminfo",
+          "parse",
+          "patrol",
+          "protect",
+          "purge",
+          "query",
+          "removeauthenticationdata",
+          "resetpassword",
+          "revisiondelete",
+          "rollback",
+          "rsd",
+          "setnotificationtimestamp",
+          "setpagelanguage",
+          "tag",
+          "unblock",
+          "undelete",
+          "unlinkaccount",
+          "upload",
+          "userrights",
+          "validatepassword",
+          "watch",
+          "cspreport",
+          "stashedit"
+        ],
+        "required": false,
+        "default": "help",
+        "multi": false,
+        "submodules": {
+          "acquiretempusername": "acquiretempusername",
+          "block": "block",
+          "changeauthenticationdata": "changeauthenticationdata",
+          "changecontentmodel": "changecontentmodel",
+          "checktoken": "checktoken",
+          "clearhasmsg": "clearhasmsg",
+          "clientlogin": "clientlogin",
+          "compare": "compare",
+          "createaccount": "createaccount",
+          "delete": "delete",
+          "edit": "edit",
+          "emailuser": "emailuser",
+          "expandtemplates": "expandtemplates",
+          "feedcontributions": "feedcontributions",
+          "feedrecentchanges": "feedrecentchanges",
+          "feedwatchlist": "feedwatchlist",
+          "filerevert": "filerevert",
+          "help": "help",
+          "imagerotate": "imagerotate",
+          "import": "import",
+          "linkaccount": "linkaccount",
+          "login": "login",
+          "logout": "logout",
+          "managetags": "managetags",
+          "mergehistory": "mergehistory",
+          "move": "move",
+          "opensearch": "opensearch",
+          "options": "options",
+          "paraminfo": "paraminfo",
+          "parse": "parse",
+          "patrol": "patrol",
+          "protect": "protect",
+          "purge": "purge",
+          "query": "query",
+          "removeauthenticationdata": "removeauthenticationdata",
+          "resetpassword": "resetpassword",
+          "revisiondelete": "revisiondelete",
+          "rollback": "rollback",
+          "rsd": "rsd",
+          "setnotificationtimestamp": "setnotificationtimestamp",
+          "setpagelanguage": "setpagelanguage",
+          "tag": "tag",
+          "unblock": "unblock",
+          "undelete": "undelete",
+          "unlinkaccount": "unlinkaccount",
+          "upload": "upload",
+          "userrights": "userrights",
+          "validatepassword": "validatepassword",
+          "watch": "watch",
+          "cspreport": "cspreport",
+          "stashedit": "stashedit"
+        },
+        "internalvalues": ["cspreport", "stashedit"]
+      },
+      {
+        "index": 2,
+        "name": "format",
+        "type": ["json", "jsonfm", "none", "php", "phpfm", "rawfm", "xml", "xmlfm"],
+        "required": false,
+        "default": "jsonfm",
+        "multi": false,
+        "submodules": {
+          "json": "json",
+          "jsonfm": "jsonfm",
+          "none": "none",
+          "php": "php",
+          "phpfm": "phpfm",
+          "rawfm": "rawfm",
+          "xml": "xml",
+          "xmlfm": "xmlfm"
+        }
+      },
+      {
+        "index": 3,
+        "name": "maxlag",
+        "type": "integer",
+        "required": false,
+        "multi": false
+      },
+      {
+        "index": 4,
+        "name": "smaxage",
+        "type": "integer",
+        "required": false,
+        "default": 0,
+        "multi": false,
+        "min": 0
+      },
+      {
+        "index": 5,
+        "name": "maxage",
+        "type": "integer",
+        "required": false,
+        "default": 0,
+        "multi": false,
+        "min": 0
+      },
+      {
+        "index": 6,
+        "name": "assert",
+        "type": ["anon", "bot", "user"],
+        "required": false,
+        "multi": false
+      },
+      {
+        "index": 7,
+        "name": "assertuser",
+        "type": "user",
+        "required": false,
+        "multi": false,
+        "subtypes": ["name", "temp"]
+      },
+      {
+        "index": 8,
+        "name": "requestid",
+        "type": "string",
+        "required": false,
+        "multi": false
+      },
+      {
+        "index": 9,
+        "name": "servedby",
+        "type": "boolean",
+        "required": false,
+        "multi": false
+      },
+      {
+        "index": 10,
+        "name": "curtimestamp",
+        "type": "boolean",
+        "required": false,
+        "multi": false
+      },
+      {
+        "index": 11,
+        "name": "responselanginfo",
+        "type": "boolean",
+        "required": false,
+        "multi": false
+      },
+      {
+        "index": 12,
+        "name": "origin",
+        "type": "string",
+        "required": false,
+        "multi": false
+      },
+      {
+        "index": 13,
+        "name": "uselang",
+        "type": "string",
+        "required": false,
+        "default": "user",
+        "multi": false
+      },
+      {
+        "index": 14,
+        "name": "variant",
+        "type": "string",
+        "required": false,
+        "multi": false
+      },
+      {
+        "index": 15,
+        "name": "errorformat",
+        "type": ["bc", "html", "none", "plaintext", "raw", "wikitext"],
+        "required": false,
+        "default": "bc",
+        "multi": false
+      },
+      {
+        "index": 16,
+        "name": "errorlang",
+        "type": "string",
+        "required": false,
+        "default": "uselang",
+        "multi": false
+      },
+      {
+        "index": 17,
+        "name": "errorsuselocal",
+        "type": "boolean",
+        "required": false,
+        "multi": false
+      }
+    ],
+    "templatedparameters": []
+  },
+  "json": {
+    "name": "json",
+    "classname": "MediaWiki\\Api\\ApiFormatJson",
+    "path": "json",
+    "group": "format",
+    "prefix": "",
+    "source": "MediaWiki",
+    "sourcename": "MediaWiki",
+    "licensetag": "GPL-2.0-or-later",
+    "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+    "readrights": true,
+    "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Data_formats"],
+    "parameters": [
+      {
+        "index": 1,
+        "name": "callback",
+        "type": "string",
+        "required": false,
+        "multi": false
+      },
+      {
+        "index": 2,
+        "name": "utf8",
+        "type": "boolean",
+        "required": false,
+        "multi": false
+      },
+      {
+        "index": 3,
+        "name": "ascii",
+        "type": "boolean",
+        "required": false,
+        "multi": false
+      },
+      {
+        "index": 4,
+        "name": "formatversion",
+        "type": ["1", "2", "latest"],
+        "required": false,
+        "default": "1",
+        "multi": false
+      }
+    ],
+    "templatedparameters": []
+  },
+  "query": {
+    "name": "query",
+    "classname": "MediaWiki\\Api\\ApiQuery",
+    "path": "query",
+    "group": "action",
+    "prefix": "",
+    "source": "MediaWiki",
+    "sourcename": "MediaWiki",
+    "licensetag": "GPL-2.0-or-later",
+    "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+    "readrights": true,
+    "helpurls": [
+      "https://www.mediawiki.org/wiki/Special:MyLanguage/API:Query",
+      "https://www.mediawiki.org/wiki/Special:MyLanguage/API:Meta",
+      "https://www.mediawiki.org/wiki/Special:MyLanguage/API:Properties",
+      "https://www.mediawiki.org/wiki/Special:MyLanguage/API:Lists"
+    ],
+    "parameters": [
+      {
+        "index": 1,
+        "name": "prop",
+        "type": [
+          "categories",
+          "categoryinfo",
+          "contributors",
+          "deletedrevisions",
+          "duplicatefiles",
+          "extlinks",
+          "fileusage",
+          "imageinfo",
+          "images",
+          "info",
+          "iwlinks",
+          "langlinks",
+          "links",
+          "linkshere",
+          "pageprops",
+          "redirects",
+          "revisions",
+          "stashimageinfo",
+          "templates",
+          "transcludedin"
+        ],
+        "required": false,
+        "multi": true,
+        "lowlimit": 50,
+        "highlimit": 500,
+        "limit": 50,
+        "submodules": {
+          "categories": "query+categories",
+          "categoryinfo": "query+categoryinfo",
+          "contributors": "query+contributors",
+          "deletedrevisions": "query+deletedrevisions",
+          "duplicatefiles": "query+duplicatefiles",
+          "extlinks": "query+extlinks",
+          "fileusage": "query+fileusage",
+          "imageinfo": "query+imageinfo",
+          "images": "query+images",
+          "info": "query+info",
+          "iwlinks": "query+iwlinks",
+          "langlinks": "query+langlinks",
+          "links": "query+links",
+          "linkshere": "query+linkshere",
+          "pageprops": "query+pageprops",
+          "redirects": "query+redirects",
+          "revisions": "query+revisions",
+          "stashimageinfo": "query+stashimageinfo",
+          "templates": "query+templates",
+          "transcludedin": "query+transcludedin"
+        }
+      },
+      {
+        "index": 2,
+        "name": "list",
+        "type": [
+          "allcategories",
+          "alldeletedrevisions",
+          "allfileusages",
+          "allimages",
+          "alllinks",
+          "allpages",
+          "allredirects",
+          "allrevisions",
+          "alltransclusions",
+          "allusers",
+          "backlinks",
+          "blocks",
+          "categorymembers",
+          "embeddedin",
+          "exturlusage",
+          "filearchive",
+          "imageusage",
+          "iwbacklinks",
+          "langbacklinks",
+          "logevents",
+          "mystashedfiles",
+          "pagepropnames",
+          "pageswithprop",
+          "prefixsearch",
+          "protectedtitles",
+          "querypage",
+          "random",
+          "recentchanges",
+          "search",
+          "tags",
+          "usercontribs",
+          "users",
+          "watchlist",
+          "watchlistraw",
+          "deletedrevs"
+        ],
+        "required": false,
+        "multi": true,
+        "lowlimit": 50,
+        "highlimit": 500,
+        "limit": 50,
+        "submodules": {
+          "allcategories": "query+allcategories",
+          "alldeletedrevisions": "query+alldeletedrevisions",
+          "allfileusages": "query+allfileusages",
+          "allimages": "query+allimages",
+          "alllinks": "query+alllinks",
+          "allpages": "query+allpages",
+          "allredirects": "query+allredirects",
+          "allrevisions": "query+allrevisions",
+          "alltransclusions": "query+alltransclusions",
+          "allusers": "query+allusers",
+          "backlinks": "query+backlinks",
+          "blocks": "query+blocks",
+          "categorymembers": "query+categorymembers",
+          "embeddedin": "query+embeddedin",
+          "exturlusage": "query+exturlusage",
+          "filearchive": "query+filearchive",
+          "imageusage": "query+imageusage",
+          "iwbacklinks": "query+iwbacklinks",
+          "langbacklinks": "query+langbacklinks",
+          "logevents": "query+logevents",
+          "mystashedfiles": "query+mystashedfiles",
+          "pagepropnames": "query+pagepropnames",
+          "pageswithprop": "query+pageswithprop",
+          "prefixsearch": "query+prefixsearch",
+          "protectedtitles": "query+protectedtitles",
+          "querypage": "query+querypage",
+          "random": "query+random",
+          "recentchanges": "query+recentchanges",
+          "search": "query+search",
+          "tags": "query+tags",
+          "usercontribs": "query+usercontribs",
+          "users": "query+users",
+          "watchlist": "query+watchlist",
+          "watchlistraw": "query+watchlistraw",
+          "deletedrevs": "query+deletedrevs"
+        },
+        "deprecatedvalues": ["deletedrevs"]
+      },
+      {
+        "index": 3,
+        "name": "meta",
+        "type": [
+          "allmessages",
+          "authmanagerinfo",
+          "filerepoinfo",
+          "languageinfo",
+          "siteinfo",
+          "tokens",
+          "userinfo"
+        ],
+        "required": false,
+        "multi": true,
+        "lowlimit": 50,
+        "highlimit": 500,
+        "limit": 50,
+        "submodules": {
+          "allmessages": "query+allmessages",
+          "authmanagerinfo": "query+authmanagerinfo",
+          "filerepoinfo": "query+filerepoinfo",
+          "languageinfo": "query+languageinfo",
+          "siteinfo": "query+siteinfo",
+          "tokens": "query+tokens",
+          "userinfo": "query+userinfo"
+        }
+      },
+      {
+        "index": 4,
+        "name": "indexpageids",
+        "type": "boolean",
+        "required": false,
+        "multi": false
+      },
+      {
+        "index": 5,
+        "name": "export",
+        "type": "boolean",
+        "required": false,
+        "multi": false
+      },
+      {
+        "index": 6,
+        "name": "exportnowrap",
+        "type": "boolean",
+        "required": false,
+        "multi": false
+      },
+      {
+        "index": 7,
+        "name": "exportschema",
+        "type": ["0.10", "0.11"],
+        "required": false,
+        "default": "0.11",
+        "multi": false
+      },
+      {
+        "index": 8,
+        "name": "iwurl",
+        "type": "boolean",
+        "required": false,
+        "multi": false
+      },
+      {
+        "index": 9,
+        "name": "continue",
+        "type": "string",
+        "required": false,
+        "multi": false
+      },
+      {
+        "index": 10,
+        "name": "rawcontinue",
+        "type": "boolean",
+        "required": false,
+        "multi": false
+      },
+      {
+        "index": 11,
+        "name": "titles",
+        "type": "string",
+        "required": false,
+        "multi": true,
+        "lowlimit": 50,
+        "highlimit": 500,
+        "limit": 50
+      },
+      {
+        "index": 12,
+        "name": "pageids",
+        "type": "integer",
+        "required": false,
+        "multi": true,
+        "lowlimit": 50,
+        "highlimit": 500,
+        "limit": 50
+      },
+      {
+        "index": 13,
+        "name": "revids",
+        "type": "integer",
+        "required": false,
+        "multi": true,
+        "lowlimit": 50,
+        "highlimit": 500,
+        "limit": 50
+      },
+      {
+        "index": 14,
+        "name": "generator",
+        "type": [
+          "allcategories",
+          "alldeletedrevisions",
+          "allfileusages",
+          "allimages",
+          "alllinks",
+          "allpages",
+          "allredirects",
+          "allrevisions",
+          "alltransclusions",
+          "backlinks",
+          "categories",
+          "categorymembers",
+          "deletedrevisions",
+          "duplicatefiles",
+          "embeddedin",
+          "exturlusage",
+          "fileusage",
+          "images",
+          "imageusage",
+          "iwbacklinks",
+          "langbacklinks",
+          "links",
+          "linkshere",
+          "pageswithprop",
+          "prefixsearch",
+          "protectedtitles",
+          "querypage",
+          "random",
+          "recentchanges",
+          "redirects",
+          "revisions",
+          "search",
+          "templates",
+          "transcludedin",
+          "watchlist",
+          "watchlistraw"
+        ],
+        "required": false,
+        "multi": false,
+        "submodules": {
+          "allcategories": "query+allcategories",
+          "alldeletedrevisions": "query+alldeletedrevisions",
+          "allfileusages": "query+allfileusages",
+          "allimages": "query+allimages",
+          "alllinks": "query+alllinks",
+          "allpages": "query+allpages",
+          "allredirects": "query+allredirects",
+          "allrevisions": "query+allrevisions",
+          "alltransclusions": "query+alltransclusions",
+          "backlinks": "query+backlinks",
+          "categories": "query+categories",
+          "categorymembers": "query+categorymembers",
+          "deletedrevisions": "query+deletedrevisions",
+          "duplicatefiles": "query+duplicatefiles",
+          "embeddedin": "query+embeddedin",
+          "exturlusage": "query+exturlusage",
+          "fileusage": "query+fileusage",
+          "images": "query+images",
+          "imageusage": "query+imageusage",
+          "iwbacklinks": "query+iwbacklinks",
+          "langbacklinks": "query+langbacklinks",
+          "links": "query+links",
+          "linkshere": "query+linkshere",
+          "pageswithprop": "query+pageswithprop",
+          "prefixsearch": "query+prefixsearch",
+          "protectedtitles": "query+protectedtitles",
+          "querypage": "query+querypage",
+          "random": "query+random",
+          "recentchanges": "query+recentchanges",
+          "redirects": "query+redirects",
+          "revisions": "query+revisions",
+          "search": "query+search",
+          "templates": "query+templates",
+          "transcludedin": "query+transcludedin",
+          "watchlist": "query+watchlist",
+          "watchlistraw": "query+watchlistraw"
+        },
+        "submoduleparamprefix": "g"
+      },
+      {
+        "index": 15,
+        "name": "redirects",
+        "type": "boolean",
+        "required": false,
+        "multi": false
+      },
+      {
+        "index": 16,
+        "name": "converttitles",
+        "type": "boolean",
+        "required": false,
+        "multi": false
+      }
+    ],
+    "templatedparameters": []
+  },
+  "actions": {
+    "acquiretempusername": {
+      "name": "acquiretempusername",
+      "classname": "MediaWiki\\Api\\ApiAcquireTempUserName",
+      "path": "acquiretempusername",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": [],
+      "parameters": [],
+      "templatedparameters": []
+    },
+    "block": {
+      "name": "block",
+      "classname": "MediaWiki\\Api\\ApiBlock",
+      "path": "block",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Block"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "user",
+          "type": "user",
+          "required": false,
+          "multi": false,
+          "subtypes": ["name", "ip", "temp", "cidr", "id"]
+        },
+        {
+          "index": 2,
+          "name": "userid",
+          "type": "integer",
+          "required": false,
+          "deprecated": true,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "expiry",
+          "type": "string",
+          "required": false,
+          "default": "never",
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "reason",
+          "type": "string",
+          "required": false,
+          "default": "",
+          "multi": false
+        },
+        {
+          "index": 5,
+          "name": "anononly",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 6,
+          "name": "nocreate",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 7,
+          "name": "autoblock",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 8,
+          "name": "noemail",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 9,
+          "name": "hidename",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 10,
+          "name": "allowusertalk",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 11,
+          "name": "reblock",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 12,
+          "name": "watchuser",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 13,
+          "name": "tags",
+          "type": [],
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 14,
+          "name": "partial",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 15,
+          "name": "pagerestrictions",
+          "type": "title",
+          "required": false,
+          "multi": true,
+          "lowlimit": 10,
+          "highlimit": 10,
+          "limit": 10,
+          "mustExist": true
+        },
+        {
+          "index": 16,
+          "name": "namespacerestrictions",
+          "type": "namespace",
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50,
+          "allspecifier": "*"
+        },
+        {
+          "index": 17,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    "changeauthenticationdata": {
+      "name": "changeauthenticationdata",
+      "classname": "MediaWiki\\Api\\ApiChangeAuthenticationData",
+      "path": "changeauthenticationdata",
+      "group": "action",
+      "prefix": "changeauth",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": [
+        "https://www.mediawiki.org/wiki/Special:MyLanguage/API:Manage_authentication_data"
+      ],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "request",
+          "type": "string",
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": [],
+      "dynamicparameters": true
+    },
+    "changecontentmodel": {
+      "name": "changecontentmodel",
+      "classname": "MediaWiki\\Api\\ApiChangeContentModel",
+      "path": "changecontentmodel",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/Help:ChangeContentModel"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "title",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "pageid",
+          "type": "integer",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "summary",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "tags",
+          "type": [],
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 5,
+          "name": "model",
+          "type": ["css", "javascript", "json", "text", "wikitext"],
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 6,
+          "name": "bot",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 7,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    "checktoken": {
+      "name": "checktoken",
+      "classname": "MediaWiki\\Api\\ApiCheckToken",
+      "path": "checktoken",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Checktoken"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "type",
+          "type": ["createaccount", "csrf", "login", "patrol", "rollback", "userrights", "watch"],
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "maxtokenage",
+          "type": "integer",
+          "required": false,
+          "multi": false
+        }
+      ],
+      "templatedparameters": []
+    },
+    "clearhasmsg": {
+      "name": "clearhasmsg",
+      "classname": "MediaWiki\\Api\\ApiClearHasMsg",
+      "path": "clearhasmsg",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:ClearHasMsg"],
+      "parameters": [],
+      "templatedparameters": []
+    },
+    "clientlogin": {
+      "name": "clientlogin",
+      "classname": "MediaWiki\\Api\\ApiClientLogin",
+      "path": "clientlogin",
+      "group": "action",
+      "prefix": "login",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Login"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "requests",
+          "type": "string",
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 2,
+          "name": "messageformat",
+          "type": ["html", "none", "raw", "wikitext"],
+          "required": false,
+          "default": "wikitext",
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "mergerequestfields",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "preservestate",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 5,
+          "name": "returnurl",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 6,
+          "name": "continue",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 7,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "login"
+        }
+      ],
+      "templatedparameters": [],
+      "dynamicparameters": true
+    },
+    "compare": {
+      "name": "compare",
+      "classname": "MediaWiki\\Api\\ApiComparePages",
+      "path": "compare",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Compare"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "fromtitle",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "fromid",
+          "type": "integer",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "fromrev",
+          "type": "integer",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "fromslots",
+          "type": ["main"],
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 9,
+          "name": "frompst",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 10,
+          "name": "fromtext",
+          "type": "text",
+          "required": false,
+          "deprecated": true,
+          "multi": false
+        },
+        {
+          "index": 11,
+          "name": "fromcontentformat",
+          "type": [
+            "application/json",
+            "application/octet-stream",
+            "application/unknown",
+            "application/x-binary",
+            "text/css",
+            "text/javascript",
+            "text/plain",
+            "text/unknown",
+            "text/x-wiki",
+            "unknown/unknown"
+          ],
+          "required": false,
+          "deprecated": true,
+          "multi": false
+        },
+        {
+          "index": 12,
+          "name": "fromcontentmodel",
+          "type": ["css", "javascript", "json", "text", "unknown", "wikitext"],
+          "required": false,
+          "deprecated": true,
+          "multi": false
+        },
+        {
+          "index": 13,
+          "name": "fromsection",
+          "type": "string",
+          "required": false,
+          "deprecated": true,
+          "multi": false
+        },
+        {
+          "index": 14,
+          "name": "totitle",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 15,
+          "name": "toid",
+          "type": "integer",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 16,
+          "name": "torev",
+          "type": "integer",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 17,
+          "name": "torelative",
+          "type": ["cur", "next", "prev"],
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 18,
+          "name": "toslots",
+          "type": ["main"],
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 23,
+          "name": "topst",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 24,
+          "name": "totext",
+          "type": "text",
+          "required": false,
+          "deprecated": true,
+          "multi": false
+        },
+        {
+          "index": 25,
+          "name": "tocontentformat",
+          "type": [
+            "application/json",
+            "application/octet-stream",
+            "application/unknown",
+            "application/x-binary",
+            "text/css",
+            "text/javascript",
+            "text/plain",
+            "text/unknown",
+            "text/x-wiki",
+            "unknown/unknown"
+          ],
+          "required": false,
+          "deprecated": true,
+          "multi": false
+        },
+        {
+          "index": 26,
+          "name": "tocontentmodel",
+          "type": ["css", "javascript", "json", "text", "unknown", "wikitext"],
+          "required": false,
+          "deprecated": true,
+          "multi": false
+        },
+        {
+          "index": 27,
+          "name": "tosection",
+          "type": "string",
+          "required": false,
+          "deprecated": true,
+          "multi": false
+        },
+        {
+          "index": 28,
+          "name": "prop",
+          "type": [
+            "comment",
+            "diff",
+            "diffsize",
+            "ids",
+            "parsedcomment",
+            "rel",
+            "size",
+            "timestamp",
+            "title",
+            "user"
+          ],
+          "required": false,
+          "default": "diff|ids|title",
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 29,
+          "name": "slots",
+          "type": ["main"],
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50,
+          "allspecifier": "*"
+        },
+        {
+          "index": 30,
+          "name": "difftype",
+          "type": ["table", "unified"],
+          "required": false,
+          "default": "table",
+          "multi": false
+        }
+      ],
+      "templatedparameters": [
+        {
+          "index": 5,
+          "name": "fromtext-{slot}",
+          "templatevars": {
+            "slot": "fromslots"
+          },
+          "type": "text",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 6,
+          "name": "fromsection-{slot}",
+          "templatevars": {
+            "slot": "fromslots"
+          },
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 7,
+          "name": "fromcontentformat-{slot}",
+          "templatevars": {
+            "slot": "fromslots"
+          },
+          "type": [
+            "application/json",
+            "application/octet-stream",
+            "application/unknown",
+            "application/x-binary",
+            "text/css",
+            "text/javascript",
+            "text/plain",
+            "text/unknown",
+            "text/x-wiki",
+            "unknown/unknown"
+          ],
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 8,
+          "name": "fromcontentmodel-{slot}",
+          "templatevars": {
+            "slot": "fromslots"
+          },
+          "type": ["css", "javascript", "json", "text", "unknown", "wikitext"],
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 19,
+          "name": "totext-{slot}",
+          "templatevars": {
+            "slot": "toslots"
+          },
+          "type": "text",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 20,
+          "name": "tosection-{slot}",
+          "templatevars": {
+            "slot": "toslots"
+          },
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 21,
+          "name": "tocontentformat-{slot}",
+          "templatevars": {
+            "slot": "toslots"
+          },
+          "type": [
+            "application/json",
+            "application/octet-stream",
+            "application/unknown",
+            "application/x-binary",
+            "text/css",
+            "text/javascript",
+            "text/plain",
+            "text/unknown",
+            "text/x-wiki",
+            "unknown/unknown"
+          ],
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 22,
+          "name": "tocontentmodel-{slot}",
+          "templatevars": {
+            "slot": "toslots"
+          },
+          "type": ["css", "javascript", "json", "text", "unknown", "wikitext"],
+          "required": false,
+          "multi": false
+        }
+      ]
+    },
+    "createaccount": {
+      "name": "createaccount",
+      "classname": "MediaWiki\\Api\\ApiAMCreateAccount",
+      "path": "createaccount",
+      "group": "action",
+      "prefix": "create",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Account_creation"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "requests",
+          "type": "string",
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 2,
+          "name": "messageformat",
+          "type": ["html", "none", "raw", "wikitext"],
+          "required": false,
+          "default": "wikitext",
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "mergerequestfields",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "preservestate",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 5,
+          "name": "returnurl",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 6,
+          "name": "continue",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 7,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "createaccount"
+        }
+      ],
+      "templatedparameters": [],
+      "dynamicparameters": true
+    },
+    "delete": {
+      "name": "delete",
+      "classname": "MediaWiki\\Api\\ApiDelete",
+      "path": "delete",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Delete"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "title",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "pageid",
+          "type": "integer",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "reason",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "tags",
+          "type": [],
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 5,
+          "name": "deletetalk",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 6,
+          "name": "watch",
+          "type": "boolean",
+          "required": false,
+          "deprecated": true,
+          "multi": false
+        },
+        {
+          "index": 7,
+          "name": "watchlist",
+          "type": ["nochange", "preferences", "unwatch", "watch"],
+          "required": false,
+          "default": "preferences",
+          "multi": false
+        },
+        {
+          "index": 8,
+          "name": "unwatch",
+          "type": "boolean",
+          "required": false,
+          "deprecated": true,
+          "multi": false
+        },
+        {
+          "index": 9,
+          "name": "oldimage",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 10,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    "edit": {
+      "name": "edit",
+      "classname": "MediaWiki\\Api\\ApiEditPage",
+      "path": "edit",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Edit"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "title",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "pageid",
+          "type": "integer",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "section",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "sectiontitle",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 5,
+          "name": "text",
+          "type": "text",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 6,
+          "name": "summary",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 7,
+          "name": "tags",
+          "type": [],
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 8,
+          "name": "minor",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 9,
+          "name": "notminor",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 10,
+          "name": "bot",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 11,
+          "name": "baserevid",
+          "type": "integer",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 12,
+          "name": "basetimestamp",
+          "type": "timestamp",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 13,
+          "name": "starttimestamp",
+          "type": "timestamp",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 14,
+          "name": "recreate",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 15,
+          "name": "createonly",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 16,
+          "name": "nocreate",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 17,
+          "name": "watch",
+          "type": "boolean",
+          "required": false,
+          "deprecated": true,
+          "multi": false
+        },
+        {
+          "index": 18,
+          "name": "unwatch",
+          "type": "boolean",
+          "required": false,
+          "deprecated": true,
+          "multi": false
+        },
+        {
+          "index": 19,
+          "name": "watchlist",
+          "type": ["nochange", "preferences", "unwatch", "watch"],
+          "required": false,
+          "default": "preferences",
+          "multi": false
+        },
+        {
+          "index": 20,
+          "name": "md5",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 21,
+          "name": "prependtext",
+          "type": "text",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 22,
+          "name": "appendtext",
+          "type": "text",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 23,
+          "name": "undo",
+          "type": "integer",
+          "required": false,
+          "multi": false,
+          "min": 0
+        },
+        {
+          "index": 24,
+          "name": "undoafter",
+          "type": "integer",
+          "required": false,
+          "multi": false,
+          "min": 0
+        },
+        {
+          "index": 25,
+          "name": "redirect",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 26,
+          "name": "contentformat",
+          "type": [
+            "application/json",
+            "application/octet-stream",
+            "application/unknown",
+            "application/x-binary",
+            "text/css",
+            "text/javascript",
+            "text/plain",
+            "text/unknown",
+            "text/x-wiki",
+            "unknown/unknown"
+          ],
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 27,
+          "name": "contentmodel",
+          "type": ["css", "javascript", "json", "text", "unknown", "wikitext"],
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 28,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        },
+        {
+          "index": 29,
+          "name": "returnto",
+          "type": "title",
+          "required": false,
+          "multi": false,
+          "mustExist": false
+        },
+        {
+          "index": 30,
+          "name": "returntoquery",
+          "type": "string",
+          "required": false,
+          "default": "",
+          "multi": false
+        },
+        {
+          "index": 31,
+          "name": "returntoanchor",
+          "type": "string",
+          "required": false,
+          "default": "",
+          "multi": false
+        }
+      ],
+      "templatedparameters": []
+    },
+    "emailuser": {
+      "name": "emailuser",
+      "classname": "MediaWiki\\Api\\ApiEmailUser",
+      "path": "emailuser",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Email"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "target",
+          "type": "string",
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "subject",
+          "type": "string",
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "text",
+          "type": "text",
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "ccme",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 5,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    "expandtemplates": {
+      "name": "expandtemplates",
+      "classname": "MediaWiki\\Api\\ApiExpandTemplates",
+      "path": "expandtemplates",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Expandtemplates"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "title",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "text",
+          "type": "text",
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "revid",
+          "type": "integer",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "prop",
+          "type": [
+            "categories",
+            "encodedjsconfigvars",
+            "jsconfigvars",
+            "modules",
+            "parsetree",
+            "properties",
+            "ttl",
+            "volatile",
+            "wikitext"
+          ],
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 5,
+          "name": "includecomments",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 6,
+          "name": "showstrategykeys",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 7,
+          "name": "generatexml",
+          "type": "boolean",
+          "required": false,
+          "deprecated": true,
+          "multi": false
+        }
+      ],
+      "templatedparameters": []
+    },
+    "filerevert": {
+      "name": "filerevert",
+      "classname": "MediaWiki\\Api\\ApiFileRevert",
+      "path": "filerevert",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Filerevert"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "filename",
+          "type": "string",
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "comment",
+          "type": "string",
+          "required": false,
+          "default": "",
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "archivename",
+          "type": "string",
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    "imagerotate": {
+      "name": "imagerotate",
+      "classname": "MediaWiki\\Api\\ApiImageRotate",
+      "path": "imagerotate",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Imagerotate"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "rotation",
+          "type": ["90", "180", "270"],
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "continue",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "tags",
+          "type": [],
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 4,
+          "name": "titles",
+          "type": "string",
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 5,
+          "name": "pageids",
+          "type": "integer",
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 6,
+          "name": "revids",
+          "type": "integer",
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 7,
+          "name": "generator",
+          "type": [
+            "allcategories",
+            "alldeletedrevisions",
+            "allfileusages",
+            "allimages",
+            "alllinks",
+            "allpages",
+            "allredirects",
+            "allrevisions",
+            "alltransclusions",
+            "backlinks",
+            "categories",
+            "categorymembers",
+            "deletedrevisions",
+            "duplicatefiles",
+            "embeddedin",
+            "exturlusage",
+            "fileusage",
+            "images",
+            "imageusage",
+            "iwbacklinks",
+            "langbacklinks",
+            "links",
+            "linkshere",
+            "pageswithprop",
+            "prefixsearch",
+            "protectedtitles",
+            "querypage",
+            "random",
+            "recentchanges",
+            "redirects",
+            "revisions",
+            "search",
+            "templates",
+            "transcludedin",
+            "watchlist",
+            "watchlistraw"
+          ],
+          "required": false,
+          "multi": false,
+          "submodules": {
+            "allcategories": "query+allcategories",
+            "alldeletedrevisions": "query+alldeletedrevisions",
+            "allfileusages": "query+allfileusages",
+            "allimages": "query+allimages",
+            "alllinks": "query+alllinks",
+            "allpages": "query+allpages",
+            "allredirects": "query+allredirects",
+            "allrevisions": "query+allrevisions",
+            "alltransclusions": "query+alltransclusions",
+            "backlinks": "query+backlinks",
+            "categories": "query+categories",
+            "categorymembers": "query+categorymembers",
+            "deletedrevisions": "query+deletedrevisions",
+            "duplicatefiles": "query+duplicatefiles",
+            "embeddedin": "query+embeddedin",
+            "exturlusage": "query+exturlusage",
+            "fileusage": "query+fileusage",
+            "images": "query+images",
+            "imageusage": "query+imageusage",
+            "iwbacklinks": "query+iwbacklinks",
+            "langbacklinks": "query+langbacklinks",
+            "links": "query+links",
+            "linkshere": "query+linkshere",
+            "pageswithprop": "query+pageswithprop",
+            "prefixsearch": "query+prefixsearch",
+            "protectedtitles": "query+protectedtitles",
+            "querypage": "query+querypage",
+            "random": "query+random",
+            "recentchanges": "query+recentchanges",
+            "redirects": "query+redirects",
+            "revisions": "query+revisions",
+            "search": "query+search",
+            "templates": "query+templates",
+            "transcludedin": "query+transcludedin",
+            "watchlist": "query+watchlist",
+            "watchlistraw": "query+watchlistraw"
+          },
+          "submoduleparamprefix": "g"
+        },
+        {
+          "index": 8,
+          "name": "redirects",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 9,
+          "name": "converttitles",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 10,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    "import": {
+      "name": "import",
+      "classname": "MediaWiki\\Api\\ApiImport",
+      "path": "import",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Import"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "summary",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "xml",
+          "type": "upload",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "interwikiprefix",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "interwikisource",
+          "type": [],
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 5,
+          "name": "interwikipage",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 6,
+          "name": "fullhistory",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 7,
+          "name": "templates",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 8,
+          "name": "namespace",
+          "type": "namespace",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 9,
+          "name": "assignknownusers",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 10,
+          "name": "rootpage",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 11,
+          "name": "tags",
+          "type": [],
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 12,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    "linkaccount": {
+      "name": "linkaccount",
+      "classname": "MediaWiki\\Api\\ApiLinkAccount",
+      "path": "linkaccount",
+      "group": "action",
+      "prefix": "link",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Linkaccount"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "requests",
+          "type": "string",
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 2,
+          "name": "messageformat",
+          "type": ["html", "none", "raw", "wikitext"],
+          "required": false,
+          "default": "wikitext",
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "mergerequestfields",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "returnurl",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 5,
+          "name": "continue",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 6,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": [],
+      "dynamicparameters": true
+    },
+    "login": {
+      "name": "login",
+      "classname": "MediaWiki\\Api\\ApiLogin",
+      "path": "login",
+      "group": "action",
+      "prefix": "lg",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Login"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "name",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "password",
+          "type": "password",
+          "required": false,
+          "sensitive": true,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "domain",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "token",
+          "type": "string",
+          "required": false,
+          "sensitive": true,
+          "multi": false
+        }
+      ],
+      "templatedparameters": []
+    },
+    "logout": {
+      "name": "logout",
+      "classname": "MediaWiki\\Api\\ApiLogout",
+      "path": "logout",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Logout"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    "managetags": {
+      "name": "managetags",
+      "classname": "MediaWiki\\Api\\ApiManageTags",
+      "path": "managetags",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Tag_management"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "operation",
+          "type": ["activate", "create", "deactivate", "delete"],
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "tag",
+          "type": "string",
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "reason",
+          "type": "string",
+          "required": false,
+          "default": "",
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "ignorewarnings",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 5,
+          "name": "tags",
+          "type": [],
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 6,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    "mergehistory": {
+      "name": "mergehistory",
+      "classname": "MediaWiki\\Api\\ApiMergeHistory",
+      "path": "mergehistory",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Mergehistory"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "from",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "fromid",
+          "type": "integer",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "to",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "toid",
+          "type": "integer",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 5,
+          "name": "timestamp",
+          "type": "timestamp",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 6,
+          "name": "reason",
+          "type": "string",
+          "required": false,
+          "default": "",
+          "multi": false
+        },
+        {
+          "index": 7,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    "move": {
+      "name": "move",
+      "classname": "MediaWiki\\Api\\ApiMove",
+      "path": "move",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Move"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "from",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "fromid",
+          "type": "integer",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "to",
+          "type": "string",
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "reason",
+          "type": "string",
+          "required": false,
+          "default": "",
+          "multi": false
+        },
+        {
+          "index": 5,
+          "name": "movetalk",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 6,
+          "name": "movesubpages",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 7,
+          "name": "noredirect",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 8,
+          "name": "watchlist",
+          "type": ["nochange", "preferences", "unwatch", "watch"],
+          "required": false,
+          "default": "preferences",
+          "multi": false
+        },
+        {
+          "index": 9,
+          "name": "ignorewarnings",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 10,
+          "name": "tags",
+          "type": [],
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 11,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    "options": {
+      "name": "options",
+      "classname": "MediaWiki\\Api\\ApiOptions",
+      "path": "options",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Options"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "reset",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "resetkinds",
+          "type": [
+            "all",
+            "registered",
+            "registered-checkmatrix",
+            "registered-multiselect",
+            "special",
+            "unused",
+            "userjs"
+          ],
+          "required": false,
+          "default": "all",
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 3,
+          "name": "change",
+          "type": "string",
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 4,
+          "name": "optionname",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 5,
+          "name": "optionvalue",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 6,
+          "name": "global",
+          "type": ["ignore", "override", "update"],
+          "required": false,
+          "default": "ignore",
+          "multi": false
+        },
+        {
+          "index": 7,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    "paraminfo": {
+      "name": "paraminfo",
+      "classname": "MediaWiki\\Api\\ApiParamInfo",
+      "path": "paraminfo",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Parameter_information"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "modules",
+          "type": "string",
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 2,
+          "name": "helpformat",
+          "type": ["html", "none", "raw", "wikitext"],
+          "required": false,
+          "default": "none",
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "querymodules",
+          "type": [
+            "allcategories",
+            "alldeletedrevisions",
+            "allfileusages",
+            "allimages",
+            "alllinks",
+            "allmessages",
+            "allpages",
+            "allredirects",
+            "allrevisions",
+            "alltransclusions",
+            "allusers",
+            "authmanagerinfo",
+            "backlinks",
+            "blocks",
+            "categories",
+            "categoryinfo",
+            "categorymembers",
+            "contributors",
+            "deletedrevisions",
+            "deletedrevs",
+            "duplicatefiles",
+            "embeddedin",
+            "extlinks",
+            "exturlusage",
+            "filearchive",
+            "filerepoinfo",
+            "fileusage",
+            "imageinfo",
+            "images",
+            "imageusage",
+            "info",
+            "iwbacklinks",
+            "iwlinks",
+            "langbacklinks",
+            "langlinks",
+            "languageinfo",
+            "links",
+            "linkshere",
+            "logevents",
+            "mystashedfiles",
+            "pagepropnames",
+            "pageprops",
+            "pageswithprop",
+            "prefixsearch",
+            "protectedtitles",
+            "querypage",
+            "random",
+            "recentchanges",
+            "redirects",
+            "revisions",
+            "search",
+            "siteinfo",
+            "stashimageinfo",
+            "tags",
+            "templates",
+            "tokens",
+            "transcludedin",
+            "usercontribs",
+            "userinfo",
+            "users",
+            "watchlist",
+            "watchlistraw"
+          ],
+          "required": false,
+          "deprecated": true,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 4,
+          "name": "mainmodule",
+          "type": "string",
+          "required": false,
+          "deprecated": true,
+          "multi": false
+        },
+        {
+          "index": 5,
+          "name": "pagesetmodule",
+          "type": "string",
+          "required": false,
+          "deprecated": true,
+          "multi": false
+        },
+        {
+          "index": 6,
+          "name": "formatmodules",
+          "type": ["json", "jsonfm", "none", "php", "phpfm", "rawfm", "xml", "xmlfm"],
+          "required": false,
+          "deprecated": true,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        }
+      ],
+      "templatedparameters": []
+    },
+    "parse": {
+      "name": "parse",
+      "classname": "MediaWiki\\Api\\ApiParse",
+      "path": "parse",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Parsing_wikitext"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "title",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "text",
+          "type": "text",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "revid",
+          "type": "integer",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "summary",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 5,
+          "name": "page",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 6,
+          "name": "pageid",
+          "type": "integer",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 7,
+          "name": "redirects",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 8,
+          "name": "oldid",
+          "type": "integer",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 9,
+          "name": "prop",
+          "type": [
+            "categories",
+            "categorieshtml",
+            "displaytitle",
+            "encodedjsconfigvars",
+            "externallinks",
+            "headhtml",
+            "images",
+            "indicators",
+            "iwlinks",
+            "jsconfigvars",
+            "langlinks",
+            "limitreportdata",
+            "limitreporthtml",
+            "links",
+            "modules",
+            "parsetree",
+            "parsewarnings",
+            "parsewarningshtml",
+            "properties",
+            "revid",
+            "sections",
+            "subtitle",
+            "templates",
+            "text",
+            "tocdata",
+            "wikitext",
+            "headitems"
+          ],
+          "required": false,
+          "default": "text|langlinks|categories|links|templates|images|externallinks|sections|tocdata|revid|displaytitle|iwlinks|properties|parsewarnings",
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50,
+          "deprecatedvalues": ["headitems"]
+        },
+        {
+          "index": 10,
+          "name": "wrapoutputclass",
+          "type": "string",
+          "required": false,
+          "default": "mw-parser-output",
+          "multi": false
+        },
+        {
+          "index": 11,
+          "name": "usearticle",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 12,
+          "name": "parsoid",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 13,
+          "name": "pst",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 14,
+          "name": "onlypst",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 15,
+          "name": "effectivelanglinks",
+          "type": "boolean",
+          "required": false,
+          "deprecated": true,
+          "multi": false
+        },
+        {
+          "index": 16,
+          "name": "section",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 17,
+          "name": "sectiontitle",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 18,
+          "name": "disablepp",
+          "type": "boolean",
+          "required": false,
+          "deprecated": true,
+          "multi": false
+        },
+        {
+          "index": 19,
+          "name": "disablelimitreport",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 20,
+          "name": "disableeditsection",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 21,
+          "name": "disablestylededuplication",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 22,
+          "name": "showstrategykeys",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 23,
+          "name": "generatexml",
+          "type": "boolean",
+          "required": false,
+          "deprecated": true,
+          "multi": false
+        },
+        {
+          "index": 24,
+          "name": "preview",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 25,
+          "name": "sectionpreview",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 26,
+          "name": "disabletoc",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 27,
+          "name": "useskin",
+          "type": [
+            "apioutput",
+            "authentication-popup",
+            "fallback",
+            "json",
+            "minerva",
+            "monobook",
+            "timeless",
+            "vector",
+            "vector-2022"
+          ],
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 28,
+          "name": "contentformat",
+          "type": [
+            "application/json",
+            "application/octet-stream",
+            "application/unknown",
+            "application/x-binary",
+            "text/css",
+            "text/javascript",
+            "text/plain",
+            "text/unknown",
+            "text/x-wiki",
+            "unknown/unknown"
+          ],
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 29,
+          "name": "contentmodel",
+          "type": ["css", "javascript", "json", "text", "unknown", "wikitext"],
+          "required": false,
+          "multi": false
+        }
+      ],
+      "templatedparameters": []
+    },
+    "patrol": {
+      "name": "patrol",
+      "classname": "MediaWiki\\Api\\ApiPatrol",
+      "path": "patrol",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Patrol"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "rcid",
+          "type": "integer",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "revid",
+          "type": "integer",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "tags",
+          "type": [],
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 4,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "patrol"
+        }
+      ],
+      "templatedparameters": []
+    },
+    "protect": {
+      "name": "protect",
+      "classname": "MediaWiki\\Api\\ApiProtect",
+      "path": "protect",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Protect"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "title",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "pageid",
+          "type": "integer",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "protections",
+          "type": "string",
+          "required": true,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 4,
+          "name": "expiry",
+          "type": "string",
+          "required": false,
+          "default": "infinite",
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50,
+          "allowsduplicates": true
+        },
+        {
+          "index": 5,
+          "name": "reason",
+          "type": "string",
+          "required": false,
+          "default": "",
+          "multi": false
+        },
+        {
+          "index": 6,
+          "name": "tags",
+          "type": [],
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 7,
+          "name": "cascade",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 8,
+          "name": "watch",
+          "type": "boolean",
+          "required": false,
+          "deprecated": true,
+          "multi": false
+        },
+        {
+          "index": 9,
+          "name": "watchlist",
+          "type": ["nochange", "preferences", "unwatch", "watch"],
+          "required": false,
+          "default": "preferences",
+          "multi": false
+        },
+        {
+          "index": 10,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    "purge": {
+      "name": "purge",
+      "classname": "MediaWiki\\Api\\ApiPurge",
+      "path": "purge",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Purge"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "forcelinkupdate",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "forcerecursivelinkupdate",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "continue",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "titles",
+          "type": "string",
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 5,
+          "name": "pageids",
+          "type": "integer",
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 6,
+          "name": "revids",
+          "type": "integer",
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 7,
+          "name": "generator",
+          "type": [
+            "allcategories",
+            "alldeletedrevisions",
+            "allfileusages",
+            "allimages",
+            "alllinks",
+            "allpages",
+            "allredirects",
+            "allrevisions",
+            "alltransclusions",
+            "backlinks",
+            "categories",
+            "categorymembers",
+            "deletedrevisions",
+            "duplicatefiles",
+            "embeddedin",
+            "exturlusage",
+            "fileusage",
+            "images",
+            "imageusage",
+            "iwbacklinks",
+            "langbacklinks",
+            "links",
+            "linkshere",
+            "pageswithprop",
+            "prefixsearch",
+            "protectedtitles",
+            "querypage",
+            "random",
+            "recentchanges",
+            "redirects",
+            "revisions",
+            "search",
+            "templates",
+            "transcludedin",
+            "watchlist",
+            "watchlistraw"
+          ],
+          "required": false,
+          "multi": false,
+          "submodules": {
+            "allcategories": "query+allcategories",
+            "alldeletedrevisions": "query+alldeletedrevisions",
+            "allfileusages": "query+allfileusages",
+            "allimages": "query+allimages",
+            "alllinks": "query+alllinks",
+            "allpages": "query+allpages",
+            "allredirects": "query+allredirects",
+            "allrevisions": "query+allrevisions",
+            "alltransclusions": "query+alltransclusions",
+            "backlinks": "query+backlinks",
+            "categories": "query+categories",
+            "categorymembers": "query+categorymembers",
+            "deletedrevisions": "query+deletedrevisions",
+            "duplicatefiles": "query+duplicatefiles",
+            "embeddedin": "query+embeddedin",
+            "exturlusage": "query+exturlusage",
+            "fileusage": "query+fileusage",
+            "images": "query+images",
+            "imageusage": "query+imageusage",
+            "iwbacklinks": "query+iwbacklinks",
+            "langbacklinks": "query+langbacklinks",
+            "links": "query+links",
+            "linkshere": "query+linkshere",
+            "pageswithprop": "query+pageswithprop",
+            "prefixsearch": "query+prefixsearch",
+            "protectedtitles": "query+protectedtitles",
+            "querypage": "query+querypage",
+            "random": "query+random",
+            "recentchanges": "query+recentchanges",
+            "redirects": "query+redirects",
+            "revisions": "query+revisions",
+            "search": "query+search",
+            "templates": "query+templates",
+            "transcludedin": "query+transcludedin",
+            "watchlist": "query+watchlist",
+            "watchlistraw": "query+watchlistraw"
+          },
+          "submoduleparamprefix": "g"
+        },
+        {
+          "index": 8,
+          "name": "redirects",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 9,
+          "name": "converttitles",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        }
+      ],
+      "templatedparameters": []
+    },
+    "removeauthenticationdata": {
+      "name": "removeauthenticationdata",
+      "classname": "MediaWiki\\Api\\ApiRemoveAuthenticationData",
+      "path": "removeauthenticationdata",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": [
+        "https://www.mediawiki.org/wiki/Special:MyLanguage/API:Manage_authentication_data"
+      ],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "request",
+          "type": "string",
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    "resetpassword": {
+      "name": "resetpassword",
+      "classname": "MediaWiki\\Api\\ApiResetPassword",
+      "path": "resetpassword",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": [
+        "https://www.mediawiki.org/wiki/Special:MyLanguage/API:Manage_authentication_data"
+      ],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "user",
+          "type": "user",
+          "required": false,
+          "multi": false,
+          "subtypes": ["name"]
+        },
+        {
+          "index": 2,
+          "name": "email",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    "revisiondelete": {
+      "name": "revisiondelete",
+      "classname": "MediaWiki\\Api\\ApiRevisionDelete",
+      "path": "revisiondelete",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Revisiondelete"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "type",
+          "type": ["archive", "filearchive", "logging", "oldimage", "revision"],
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "target",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "ids",
+          "type": "string",
+          "required": true,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 4,
+          "name": "hide",
+          "type": ["comment", "content", "user"],
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 5,
+          "name": "show",
+          "type": ["comment", "content", "user"],
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 6,
+          "name": "suppress",
+          "type": ["no", "nochange", "yes"],
+          "required": false,
+          "default": "nochange",
+          "multi": false
+        },
+        {
+          "index": 7,
+          "name": "reason",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 8,
+          "name": "tags",
+          "type": [],
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 9,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    "rollback": {
+      "name": "rollback",
+      "classname": "MediaWiki\\Api\\ApiRollback",
+      "path": "rollback",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Rollback"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "title",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "pageid",
+          "type": "integer",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "tags",
+          "type": [],
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 4,
+          "name": "user",
+          "type": "user",
+          "required": true,
+          "multi": false,
+          "subtypes": ["name", "ip", "temp", "interwiki", "id"]
+        },
+        {
+          "index": 5,
+          "name": "summary",
+          "type": "string",
+          "required": false,
+          "default": "",
+          "multi": false
+        },
+        {
+          "index": 6,
+          "name": "markbot",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 7,
+          "name": "watchlist",
+          "type": ["nochange", "preferences", "unwatch", "watch"],
+          "required": false,
+          "default": "preferences",
+          "multi": false
+        },
+        {
+          "index": 8,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "rollback"
+        }
+      ],
+      "templatedparameters": []
+    },
+    "setnotificationtimestamp": {
+      "name": "setnotificationtimestamp",
+      "classname": "MediaWiki\\Api\\ApiSetNotificationTimestamp",
+      "path": "setnotificationtimestamp",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": [
+        "https://www.mediawiki.org/wiki/Special:MyLanguage/API:SetNotificationTimestamp"
+      ],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "entirewatchlist",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "timestamp",
+          "type": "timestamp",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "torevid",
+          "type": "integer",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "newerthanrevid",
+          "type": "integer",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 5,
+          "name": "continue",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 6,
+          "name": "titles",
+          "type": "string",
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 7,
+          "name": "pageids",
+          "type": "integer",
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 8,
+          "name": "revids",
+          "type": "integer",
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 9,
+          "name": "generator",
+          "type": [
+            "allcategories",
+            "alldeletedrevisions",
+            "allfileusages",
+            "allimages",
+            "alllinks",
+            "allpages",
+            "allredirects",
+            "allrevisions",
+            "alltransclusions",
+            "backlinks",
+            "categories",
+            "categorymembers",
+            "deletedrevisions",
+            "duplicatefiles",
+            "embeddedin",
+            "exturlusage",
+            "fileusage",
+            "images",
+            "imageusage",
+            "iwbacklinks",
+            "langbacklinks",
+            "links",
+            "linkshere",
+            "pageswithprop",
+            "prefixsearch",
+            "protectedtitles",
+            "querypage",
+            "random",
+            "recentchanges",
+            "redirects",
+            "revisions",
+            "search",
+            "templates",
+            "transcludedin",
+            "watchlist",
+            "watchlistraw"
+          ],
+          "required": false,
+          "multi": false,
+          "submodules": {
+            "allcategories": "query+allcategories",
+            "alldeletedrevisions": "query+alldeletedrevisions",
+            "allfileusages": "query+allfileusages",
+            "allimages": "query+allimages",
+            "alllinks": "query+alllinks",
+            "allpages": "query+allpages",
+            "allredirects": "query+allredirects",
+            "allrevisions": "query+allrevisions",
+            "alltransclusions": "query+alltransclusions",
+            "backlinks": "query+backlinks",
+            "categories": "query+categories",
+            "categorymembers": "query+categorymembers",
+            "deletedrevisions": "query+deletedrevisions",
+            "duplicatefiles": "query+duplicatefiles",
+            "embeddedin": "query+embeddedin",
+            "exturlusage": "query+exturlusage",
+            "fileusage": "query+fileusage",
+            "images": "query+images",
+            "imageusage": "query+imageusage",
+            "iwbacklinks": "query+iwbacklinks",
+            "langbacklinks": "query+langbacklinks",
+            "links": "query+links",
+            "linkshere": "query+linkshere",
+            "pageswithprop": "query+pageswithprop",
+            "prefixsearch": "query+prefixsearch",
+            "protectedtitles": "query+protectedtitles",
+            "querypage": "query+querypage",
+            "random": "query+random",
+            "recentchanges": "query+recentchanges",
+            "redirects": "query+redirects",
+            "revisions": "query+revisions",
+            "search": "query+search",
+            "templates": "query+templates",
+            "transcludedin": "query+transcludedin",
+            "watchlist": "query+watchlist",
+            "watchlistraw": "query+watchlistraw"
+          },
+          "submoduleparamprefix": "g"
+        },
+        {
+          "index": 10,
+          "name": "redirects",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 11,
+          "name": "converttitles",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 12,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    "setpagelanguage": {
+      "name": "setpagelanguage",
+      "classname": "MediaWiki\\Api\\ApiSetPageLanguage",
+      "path": "setpagelanguage",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:SetPageLanguage"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "title",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "pageid",
+          "type": "integer",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "lang",
+          "type": [
+            "aae",
+            "ab",
+            "abs",
+            "ace",
+            "acf",
+            "acm",
+            "ady",
+            "ady-cyrl",
+            "aeb",
+            "aeb-arab",
+            "aeb-latn",
+            "af",
+            "aln",
+            "alt",
+            "am",
+            "ami",
+            "an",
+            "ang",
+            "ann",
+            "anp",
+            "apc",
+            "ar",
+            "arc",
+            "arn",
+            "arq",
+            "ary",
+            "arz",
+            "as",
+            "ase",
+            "ast",
+            "atj",
+            "av",
+            "avk",
+            "awa",
+            "ay",
+            "az",
+            "azb",
+            "ba",
+            "ban",
+            "ban-bali",
+            "bar",
+            "bbc",
+            "bbc-latn",
+            "bcc",
+            "bci",
+            "bcl",
+            "bdr",
+            "be",
+            "be-tarask",
+            "bew",
+            "bg",
+            "bgc",
+            "bgn",
+            "bh",
+            "bho",
+            "bi",
+            "bjn",
+            "blk",
+            "bm",
+            "bn",
+            "bo",
+            "bpy",
+            "bqi",
+            "br",
+            "brh",
+            "bs",
+            "btm",
+            "bto",
+            "bug",
+            "bxr",
+            "ca",
+            "cbk-zam",
+            "ccp",
+            "cdo",
+            "ce",
+            "ceb",
+            "ch",
+            "chn",
+            "chr",
+            "chy",
+            "ckb",
+            "co",
+            "cps",
+            "cpx",
+            "cpx-hans",
+            "cpx-hant",
+            "cr",
+            "crh",
+            "crh-cyrl",
+            "crh-latn",
+            "crh-ro",
+            "cs",
+            "csb",
+            "cu",
+            "cv",
+            "cy",
+            "da",
+            "dag",
+            "de",
+            "de-at",
+            "de-ch",
+            "de-formal",
+            "default",
+            "dga",
+            "din",
+            "diq",
+            "dsb",
+            "dtp",
+            "dty",
+            "dua",
+            "dv",
+            "dz",
+            "ee",
+            "efi",
+            "egl",
+            "el",
+            "eml",
+            "en",
+            "en-ca",
+            "en-gb",
+            "eo",
+            "es",
+            "es-formal",
+            "et",
+            "eu",
+            "ext",
+            "fa",
+            "fat",
+            "ff",
+            "fi",
+            "fit",
+            "fj",
+            "fo",
+            "fon",
+            "fr",
+            "frc",
+            "frp",
+            "frr",
+            "fur",
+            "fy",
+            "ga",
+            "gaa",
+            "gag",
+            "gan",
+            "gan-hans",
+            "gan-hant",
+            "gcf",
+            "gcr",
+            "gd",
+            "gl",
+            "gld",
+            "glk",
+            "gn",
+            "gom",
+            "gom-deva",
+            "gom-latn",
+            "gor",
+            "got",
+            "gpe",
+            "grc",
+            "gsw",
+            "gu",
+            "guc",
+            "gur",
+            "guw",
+            "gv",
+            "ha",
+            "hak",
+            "hak-hans",
+            "hak-hant",
+            "hak-latn",
+            "haw",
+            "he",
+            "hi",
+            "hif",
+            "hif-latn",
+            "hil",
+            "hno",
+            "hr",
+            "hrx",
+            "hsb",
+            "hsn",
+            "ht",
+            "hu",
+            "hu-formal",
+            "hy",
+            "hyw",
+            "ia",
+            "iba",
+            "ibb",
+            "id",
+            "ie",
+            "ig",
+            "igl",
+            "ii",
+            "ik",
+            "ike-cans",
+            "ike-latn",
+            "ilo",
+            "inh",
+            "io",
+            "is",
+            "isv-cyrl",
+            "isv-latn",
+            "it",
+            "iu",
+            "ja",
+            "jam",
+            "jbo",
+            "jut",
+            "jv",
+            "ka",
+            "kaa",
+            "kab",
+            "kai",
+            "kbd",
+            "kbd-cyrl",
+            "kbp",
+            "kcg",
+            "kea",
+            "kg",
+            "kge",
+            "khw",
+            "ki",
+            "kiu",
+            "kjh",
+            "kjp",
+            "kk",
+            "kk-arab",
+            "kk-cn",
+            "kk-cyrl",
+            "kk-kz",
+            "kk-latn",
+            "kk-tr",
+            "kl",
+            "km",
+            "kn",
+            "knc",
+            "ko",
+            "ko-kp",
+            "koi",
+            "kr",
+            "krc",
+            "kri",
+            "krj",
+            "krl",
+            "ks",
+            "ks-arab",
+            "ks-deva",
+            "ksh",
+            "ksw",
+            "ku",
+            "ku-arab",
+            "ku-latn",
+            "kum",
+            "kus",
+            "kv",
+            "kw",
+            "ky",
+            "la",
+            "lad",
+            "lb",
+            "lbe",
+            "lez",
+            "lfn",
+            "lg",
+            "li",
+            "lij",
+            "liv",
+            "lki",
+            "lld",
+            "lmo",
+            "ln",
+            "lo",
+            "loz",
+            "lrc",
+            "lt",
+            "ltg",
+            "lua",
+            "lus",
+            "luz",
+            "lv",
+            "lzh",
+            "lzz",
+            "mad",
+            "mag",
+            "mai",
+            "map-bms",
+            "mdf",
+            "mg",
+            "mhr",
+            "mi",
+            "min",
+            "mk",
+            "ml",
+            "mn",
+            "mnc",
+            "mnc-latn",
+            "mnc-mong",
+            "mni",
+            "mnw",
+            "mo",
+            "mos",
+            "mr",
+            "mrh",
+            "mrj",
+            "ms",
+            "ms-arab",
+            "mt",
+            "mui",
+            "mwl",
+            "my",
+            "myv",
+            "mzn",
+            "na",
+            "nah",
+            "nan",
+            "nan-hant",
+            "nan-latn-pehoeji",
+            "nan-latn-tailo",
+            "nap",
+            "nb",
+            "nds",
+            "nds-nl",
+            "ne",
+            "new",
+            "nia",
+            "nit",
+            "niu",
+            "nl",
+            "nl-informal",
+            "nmz",
+            "nn",
+            "nod",
+            "nog",
+            "nov",
+            "nqo",
+            "nr",
+            "nrm",
+            "nso",
+            "nup",
+            "nv",
+            "ny",
+            "nyn",
+            "nyo",
+            "nys",
+            "oc",
+            "ojb",
+            "olo",
+            "om",
+            "or",
+            "os",
+            "pa",
+            "pag",
+            "pam",
+            "pap",
+            "pcd",
+            "pcm",
+            "pdc",
+            "pdt",
+            "pfl",
+            "pi",
+            "pih",
+            "pl",
+            "pms",
+            "pnb",
+            "pnt",
+            "prg",
+            "ps",
+            "pt",
+            "pt-br",
+            "pwn",
+            "qu",
+            "qug",
+            "rgn",
+            "rif",
+            "rki",
+            "rm",
+            "rmc",
+            "rmy",
+            "rn",
+            "ro",
+            "roa-tara",
+            "rsk",
+            "ru",
+            "rue",
+            "rup",
+            "ruq",
+            "ruq-cyrl",
+            "ruq-latn",
+            "rut",
+            "rw",
+            "ryu",
+            "sa",
+            "sah",
+            "sat",
+            "sc",
+            "scn",
+            "sco",
+            "sd",
+            "sdc",
+            "sdh",
+            "se",
+            "se-fi",
+            "se-no",
+            "se-se",
+            "sei",
+            "ses",
+            "sg",
+            "sgs",
+            "sh",
+            "sh-cyrl",
+            "sh-latn",
+            "shi",
+            "shn",
+            "shy",
+            "shy-latn",
+            "si",
+            "sjd",
+            "sje",
+            "sk",
+            "skr",
+            "skr-arab",
+            "sl",
+            "sli",
+            "sm",
+            "sma",
+            "smn",
+            "sms",
+            "sn",
+            "so",
+            "sq",
+            "sr",
+            "sr-ec",
+            "sr-el",
+            "srn",
+            "sro",
+            "ss",
+            "st",
+            "stq",
+            "sty",
+            "su",
+            "sv",
+            "sw",
+            "syl",
+            "szl",
+            "szy",
+            "ta",
+            "tay",
+            "tcy",
+            "tdd",
+            "te",
+            "tet",
+            "tg",
+            "tg-cyrl",
+            "tg-latn",
+            "th",
+            "ti",
+            "tig",
+            "tk",
+            "tl",
+            "tly",
+            "tn",
+            "to",
+            "tok",
+            "tpi",
+            "tr",
+            "tru",
+            "trv",
+            "ts",
+            "tt",
+            "tt-cyrl",
+            "tt-latn",
+            "ttj",
+            "tum",
+            "tw",
+            "ty",
+            "tyv",
+            "tzm",
+            "udm",
+            "ug",
+            "ug-arab",
+            "ug-latn",
+            "uk",
+            "ur",
+            "uz",
+            "ve",
+            "vec",
+            "vep",
+            "vi",
+            "vls",
+            "vmf",
+            "vmw",
+            "vo",
+            "vot",
+            "vro",
+            "wa",
+            "wal",
+            "war",
+            "wls",
+            "wo",
+            "wuu",
+            "wuu-hans",
+            "wuu-hant",
+            "xal",
+            "xh",
+            "xmf",
+            "xsy",
+            "yi",
+            "yo",
+            "yrl",
+            "yue",
+            "yue-hans",
+            "yue-hant",
+            "za",
+            "zea",
+            "zgh",
+            "zh",
+            "zh-cn",
+            "zh-hans",
+            "zh-hant",
+            "zh-hk",
+            "zh-mo",
+            "zh-my",
+            "zh-sg",
+            "zh-tw",
+            "zu"
+          ],
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "reason",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 5,
+          "name": "tags",
+          "type": [],
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 6,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    "tag": {
+      "name": "tag",
+      "classname": "MediaWiki\\Api\\ApiTag",
+      "path": "tag",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Tag"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "rcid",
+          "type": "integer",
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 2,
+          "name": "revid",
+          "type": "integer",
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 3,
+          "name": "logid",
+          "type": "integer",
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 4,
+          "name": "add",
+          "type": [],
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 5,
+          "name": "remove",
+          "type": "string",
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 6,
+          "name": "reason",
+          "type": "string",
+          "required": false,
+          "default": "",
+          "multi": false
+        },
+        {
+          "index": 7,
+          "name": "tags",
+          "type": [],
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 8,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    "unblock": {
+      "name": "unblock",
+      "classname": "MediaWiki\\Api\\ApiUnblock",
+      "path": "unblock",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Block"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "id",
+          "type": "integer",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "user",
+          "type": "user",
+          "required": false,
+          "multi": false,
+          "subtypes": ["name", "ip", "temp", "cidr", "id"]
+        },
+        {
+          "index": 3,
+          "name": "userid",
+          "type": "integer",
+          "required": false,
+          "deprecated": true,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "reason",
+          "type": "string",
+          "required": false,
+          "default": "",
+          "multi": false
+        },
+        {
+          "index": 5,
+          "name": "tags",
+          "type": [],
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 6,
+          "name": "watchuser",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 7,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    "undelete": {
+      "name": "undelete",
+      "classname": "MediaWiki\\Api\\ApiUndelete",
+      "path": "undelete",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Undelete"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "title",
+          "type": "string",
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "reason",
+          "type": "string",
+          "required": false,
+          "default": "",
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "tags",
+          "type": [],
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 4,
+          "name": "timestamps",
+          "type": "timestamp",
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 5,
+          "name": "fileids",
+          "type": "integer",
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 6,
+          "name": "undeletetalk",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 7,
+          "name": "watchlist",
+          "type": ["nochange", "preferences", "unwatch", "watch"],
+          "required": false,
+          "default": "preferences",
+          "multi": false
+        },
+        {
+          "index": 8,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    "unlinkaccount": {
+      "name": "unlinkaccount",
+      "classname": "MediaWiki\\Api\\ApiRemoveAuthenticationData",
+      "path": "unlinkaccount",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": [
+        "https://www.mediawiki.org/wiki/Special:MyLanguage/API:Manage_authentication_data"
+      ],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "request",
+          "type": "string",
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    "upload": {
+      "name": "upload",
+      "classname": "MediaWiki\\Api\\ApiUpload",
+      "path": "upload",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Upload"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "filename",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "comment",
+          "type": "string",
+          "required": false,
+          "default": "",
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "tags",
+          "type": [],
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 4,
+          "name": "text",
+          "type": "text",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 5,
+          "name": "watch",
+          "type": "boolean",
+          "required": false,
+          "deprecated": true,
+          "multi": false
+        },
+        {
+          "index": 6,
+          "name": "watchlist",
+          "type": ["nochange", "preferences", "watch"],
+          "required": false,
+          "default": "preferences",
+          "multi": false
+        },
+        {
+          "index": 7,
+          "name": "ignorewarnings",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 8,
+          "name": "file",
+          "type": "upload",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 9,
+          "name": "url",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 10,
+          "name": "filekey",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 11,
+          "name": "sessionkey",
+          "type": "string",
+          "required": false,
+          "deprecated": true,
+          "multi": false
+        },
+        {
+          "index": 12,
+          "name": "stash",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 13,
+          "name": "filesize",
+          "type": "integer",
+          "required": false,
+          "multi": false,
+          "min": 0,
+          "max": 104857600
+        },
+        {
+          "index": 14,
+          "name": "offset",
+          "type": "integer",
+          "required": false,
+          "multi": false,
+          "min": 0
+        },
+        {
+          "index": 15,
+          "name": "chunk",
+          "type": "upload",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 16,
+          "name": "async",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 17,
+          "name": "checkstatus",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 18,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    "userrights": {
+      "name": "userrights",
+      "classname": "MediaWiki\\Api\\ApiUserrights",
+      "path": "userrights",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:User_group_membership"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "user",
+          "type": "user",
+          "required": false,
+          "multi": false,
+          "subtypes": ["name", "id"]
+        },
+        {
+          "index": 2,
+          "name": "userid",
+          "type": "integer",
+          "required": false,
+          "deprecated": true,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "add",
+          "type": ["bot", "bureaucrat", "interface-admin", "suppress", "sysop"],
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 4,
+          "name": "expiry",
+          "type": "string",
+          "required": false,
+          "default": "infinite",
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50,
+          "allowsduplicates": true
+        },
+        {
+          "index": 5,
+          "name": "remove",
+          "type": ["bot", "bureaucrat", "interface-admin", "suppress", "sysop"],
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 6,
+          "name": "reason",
+          "type": "string",
+          "required": false,
+          "default": "",
+          "multi": false
+        },
+        {
+          "index": 7,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "userrights"
+        },
+        {
+          "index": 8,
+          "name": "tags",
+          "type": [],
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 9,
+          "name": "watchuser",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        }
+      ],
+      "templatedparameters": []
+    },
+    "validatepassword": {
+      "name": "validatepassword",
+      "classname": "MediaWiki\\Api\\ApiValidatePassword",
+      "path": "validatepassword",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Validatepassword"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "password",
+          "type": "password",
+          "required": true,
+          "sensitive": true,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "user",
+          "type": "user",
+          "required": false,
+          "multi": false,
+          "subtypes": ["name", "id"]
+        },
+        {
+          "index": 3,
+          "name": "email",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "realname",
+          "type": "string",
+          "required": false,
+          "multi": false
+        }
+      ],
+      "templatedparameters": []
+    },
+    "watch": {
+      "name": "watch",
+      "classname": "MediaWiki\\Api\\ApiWatch",
+      "path": "watch",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Watch"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "title",
+          "type": "string",
+          "required": false,
+          "deprecated": true,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "unwatch",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "continue",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "titles",
+          "type": "string",
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 5,
+          "name": "pageids",
+          "type": "integer",
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 6,
+          "name": "revids",
+          "type": "integer",
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 7,
+          "name": "generator",
+          "type": [
+            "allcategories",
+            "alldeletedrevisions",
+            "allfileusages",
+            "allimages",
+            "alllinks",
+            "allpages",
+            "allredirects",
+            "allrevisions",
+            "alltransclusions",
+            "backlinks",
+            "categories",
+            "categorymembers",
+            "deletedrevisions",
+            "duplicatefiles",
+            "embeddedin",
+            "exturlusage",
+            "fileusage",
+            "images",
+            "imageusage",
+            "iwbacklinks",
+            "langbacklinks",
+            "links",
+            "linkshere",
+            "pageswithprop",
+            "prefixsearch",
+            "protectedtitles",
+            "querypage",
+            "random",
+            "recentchanges",
+            "redirects",
+            "revisions",
+            "search",
+            "templates",
+            "transcludedin",
+            "watchlist",
+            "watchlistraw"
+          ],
+          "required": false,
+          "multi": false,
+          "submodules": {
+            "allcategories": "query+allcategories",
+            "alldeletedrevisions": "query+alldeletedrevisions",
+            "allfileusages": "query+allfileusages",
+            "allimages": "query+allimages",
+            "alllinks": "query+alllinks",
+            "allpages": "query+allpages",
+            "allredirects": "query+allredirects",
+            "allrevisions": "query+allrevisions",
+            "alltransclusions": "query+alltransclusions",
+            "backlinks": "query+backlinks",
+            "categories": "query+categories",
+            "categorymembers": "query+categorymembers",
+            "deletedrevisions": "query+deletedrevisions",
+            "duplicatefiles": "query+duplicatefiles",
+            "embeddedin": "query+embeddedin",
+            "exturlusage": "query+exturlusage",
+            "fileusage": "query+fileusage",
+            "images": "query+images",
+            "imageusage": "query+imageusage",
+            "iwbacklinks": "query+iwbacklinks",
+            "langbacklinks": "query+langbacklinks",
+            "links": "query+links",
+            "linkshere": "query+linkshere",
+            "pageswithprop": "query+pageswithprop",
+            "prefixsearch": "query+prefixsearch",
+            "protectedtitles": "query+protectedtitles",
+            "querypage": "query+querypage",
+            "random": "query+random",
+            "recentchanges": "query+recentchanges",
+            "redirects": "query+redirects",
+            "revisions": "query+revisions",
+            "search": "query+search",
+            "templates": "query+templates",
+            "transcludedin": "query+transcludedin",
+            "watchlist": "query+watchlist",
+            "watchlistraw": "query+watchlistraw"
+          },
+          "submoduleparamprefix": "g"
+        },
+        {
+          "index": 8,
+          "name": "redirects",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 9,
+          "name": "converttitles",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 10,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "watch"
+        }
+      ],
+      "templatedparameters": []
+    },
+    "cspreport": {
+      "name": "cspreport",
+      "classname": "MediaWiki\\Api\\ApiCSPReport",
+      "path": "cspreport",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "internal": true,
+      "mustbeposted": true,
+      "helpurls": [],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "reportonly",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "source",
+          "type": "string",
+          "required": false,
+          "default": "internal",
+          "multi": false
+        }
+      ],
+      "templatedparameters": []
+    },
+    "stashedit": {
+      "name": "stashedit",
+      "classname": "MediaWiki\\Api\\ApiStashEdit",
+      "path": "stashedit",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "internal": true,
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Stashedit"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "title",
+          "type": "string",
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "section",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "sectiontitle",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "text",
+          "type": "text",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 5,
+          "name": "stashedtexthash",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 6,
+          "name": "summary",
+          "type": "string",
+          "required": false,
+          "default": "",
+          "multi": false
+        },
+        {
+          "index": 7,
+          "name": "contentmodel",
+          "type": ["css", "javascript", "json", "text", "unknown", "wikitext"],
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 8,
+          "name": "contentformat",
+          "type": [
+            "application/json",
+            "application/octet-stream",
+            "application/unknown",
+            "application/x-binary",
+            "text/css",
+            "text/javascript",
+            "text/plain",
+            "text/unknown",
+            "text/x-wiki",
+            "unknown/unknown"
+          ],
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 9,
+          "name": "baserevid",
+          "type": "integer",
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 10,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    }
+  },
+  "descriptions": {
+    "allcategories": {
+      "description": "",
+      "params": {
+        "acfrom": "",
+        "accontinue": "",
+        "acto": "",
+        "acprefix": "",
+        "acdir": "",
+        "acmin": "",
+        "acmax": "",
+        "aclimit": "",
+        "acprop": ""
+      }
+    },
+    "alldeletedrevisions": {
+      "description": "",
+      "params": {
+        "adrprop": "",
+        "adrslots": "",
+        "adrlimit": "",
+        "adrexpandtemplates": "",
+        "adrgeneratexml": "",
+        "adrparse": "",
+        "adrsection": "",
+        "adrdiffto": "",
+        "adrdifftotext": "",
+        "adrdifftotextpst": "",
+        "adrcontentformat": "",
+        "adruser": "",
+        "adrnamespace": "",
+        "adrstart": "",
+        "adrend": "",
+        "adrdir": "",
+        "adrfrom": "",
+        "adrto": "",
+        "adrprefix": "",
+        "adrexcludeuser": "",
+        "adrtag": "",
+        "adrcontinue": "",
+        "adrgeneratetitles": ""
+      }
+    },
+    "allfileusages": {
+      "description": "",
+      "params": {
+        "afcontinue": "",
+        "affrom": "",
+        "afto": "",
+        "afprefix": "",
+        "afunique": "",
+        "afprop": "",
+        "aflimit": "",
+        "afdir": ""
+      }
+    },
+    "allimages": {
+      "description": "",
+      "params": {
+        "aisort": "",
+        "aidir": "",
+        "aifrom": "",
+        "aito": "",
+        "aicontinue": "",
+        "aistart": "",
+        "aiend": "",
+        "aiprop": "",
+        "aiprefix": "",
+        "aiminsize": "",
+        "aimaxsize": "",
+        "aisha1": "",
+        "aisha1base36": "",
+        "aiuser": "",
+        "aifilterbots": "",
+        "aimime": "",
+        "ailimit": ""
+      }
+    },
+    "alllinks": {
+      "description": "",
+      "params": {
+        "alcontinue": "",
+        "alfrom": "",
+        "alto": "",
+        "alprefix": "",
+        "alunique": "",
+        "alprop": "",
+        "alnamespace": "",
+        "allimit": "",
+        "aldir": ""
+      }
+    },
+    "allmessages": {
+      "description": "",
+      "params": {
+        "ammessages": "",
+        "amprop": "",
+        "amenableparser": "",
+        "amnocontent": "",
+        "amincludelocal": "",
+        "amargs": "",
+        "amfilter": "",
+        "amcustomised": "",
+        "amlang": "",
+        "amfrom": "",
+        "amto": "",
+        "amtitle": "",
+        "amprefix": ""
+      }
+    },
+    "allpages": {
+      "description": "",
+      "params": {
+        "apfrom": "",
+        "apcontinue": "",
+        "apto": "",
+        "apprefix": "",
+        "apnamespace": "",
+        "apfilterredir": "",
+        "apfilterlanglinks": "",
+        "apminsize": "",
+        "apmaxsize": "",
+        "apprtype": "",
+        "apprlevel": "",
+        "apprfiltercascade": "",
+        "apprexpiry": "",
+        "aplimit": "",
+        "apdir": ""
+      }
+    },
+    "allredirects": {
+      "description": "",
+      "params": {
+        "arcontinue": "",
+        "arfrom": "",
+        "arto": "",
+        "arprefix": "",
+        "arunique": "",
+        "arprop": "",
+        "arnamespace": "",
+        "arlimit": "",
+        "ardir": ""
+      }
+    },
+    "allrevisions": {
+      "description": "",
+      "params": {
+        "arvprop": "",
+        "arvslots": "",
+        "arvlimit": "",
+        "arvexpandtemplates": "",
+        "arvgeneratexml": "",
+        "arvparse": "",
+        "arvsection": "",
+        "arvdiffto": "",
+        "arvdifftotext": "",
+        "arvdifftotextpst": "",
+        "arvcontentformat": "",
+        "arvuser": "",
+        "arvnamespace": "",
+        "arvstart": "",
+        "arvend": "",
+        "arvdir": "",
+        "arvexcludeuser": "",
+        "arvcontinue": "",
+        "arvgeneratetitles": ""
+      }
+    },
+    "alltransclusions": {
+      "description": "",
+      "params": {
+        "atcontinue": "",
+        "atfrom": "",
+        "atto": "",
+        "atprefix": "",
+        "atunique": "",
+        "atprop": "",
+        "atnamespace": "",
+        "atlimit": "",
+        "atdir": ""
+      }
+    },
+    "allusers": {
+      "description": "",
+      "params": {
+        "aufrom": "",
+        "auto": "",
+        "auprefix": "",
+        "audir": "",
+        "augroup": "",
+        "auexcludegroup": "",
+        "aurights": "",
+        "auprop": "",
+        "aulimit": "",
+        "auwitheditsonly": "",
+        "auactiveusers": "",
+        "auattachedwiki": "",
+        "auexcludenamed": "",
+        "auexcludetemp": ""
+      }
+    },
+    "authmanagerinfo": {
+      "description": "",
+      "params": {
+        "amisecuritysensitiveoperation": "",
+        "amirequestsfor": "",
+        "amimergerequestfields": "",
+        "amimessageformat": ""
+      }
+    },
+    "backlinks": {
+      "description": "",
+      "params": {
+        "bltitle": "",
+        "blpageid": "",
+        "blcontinue": "",
+        "blnamespace": "",
+        "bldir": "",
+        "blfilterredir": "",
+        "bllimit": "",
+        "blredirect": ""
+      }
+    },
+    "blocks": {
+      "description": "",
+      "params": {
+        "bkstart": "",
+        "bkend": "",
+        "bkdir": "",
+        "bkids": "",
+        "bkusers": "",
+        "bkip": "",
+        "bklimit": "",
+        "bkprop": "",
+        "bkshow": "",
+        "bkcontinue": ""
+      }
+    },
+    "categories": {
+      "description": "",
+      "params": {
+        "clprop": "",
+        "clshow": "",
+        "cllimit": "",
+        "clcontinue": "",
+        "clcategories": "",
+        "cldir": ""
+      }
+    },
+    "categoryinfo": {
+      "description": "",
+      "params": {
+        "cicontinue": ""
+      }
+    },
+    "categorymembers": {
+      "description": "",
+      "params": {
+        "cmtitle": "",
+        "cmpageid": "",
+        "cmprop": "",
+        "cmnamespace": "",
+        "cmtype": "",
+        "cmcontinue": "",
+        "cmlimit": "",
+        "cmsort": "",
+        "cmdir": "",
+        "cmstart": "",
+        "cmend": "",
+        "cmstarthexsortkey": "",
+        "cmendhexsortkey": "",
+        "cmstartsortkeyprefix": "",
+        "cmendsortkeyprefix": "",
+        "cmstartsortkey": "",
+        "cmendsortkey": ""
+      }
+    },
+    "contributors": {
+      "description": "",
+      "params": {
+        "pcgroup": "",
+        "pcexcludegroup": "",
+        "pcrights": "",
+        "pcexcluderights": "",
+        "pclimit": "",
+        "pccontinue": ""
+      }
+    },
+    "deletedrevisions": {
+      "description": "",
+      "params": {
+        "drvprop": "",
+        "drvslots": "",
+        "drvlimit": "",
+        "drvexpandtemplates": "",
+        "drvgeneratexml": "",
+        "drvparse": "",
+        "drvsection": "",
+        "drvdiffto": "",
+        "drvdifftotext": "",
+        "drvdifftotextpst": "",
+        "drvcontentformat": "",
+        "drvstart": "",
+        "drvend": "",
+        "drvdir": "",
+        "drvtag": "",
+        "drvuser": "",
+        "drvexcludeuser": "",
+        "drvcontinue": ""
+      }
+    },
+    "deletedrevs": {
+      "description": "",
+      "params": {
+        "drstart": "",
+        "drend": "",
+        "drdir": "",
+        "drfrom": "",
+        "drto": "",
+        "drprefix": "",
+        "drunique": "",
+        "drnamespace": "",
+        "drtag": "",
+        "druser": "",
+        "drexcludeuser": "",
+        "drprop": "",
+        "drlimit": "",
+        "drcontinue": ""
+      }
+    },
+    "duplicatefiles": {
+      "description": "",
+      "params": {
+        "dflimit": "",
+        "dfcontinue": "",
+        "dfdir": "",
+        "dflocalonly": ""
+      }
+    },
+    "embeddedin": {
+      "description": "",
+      "params": {
+        "eititle": "",
+        "eipageid": "",
+        "eicontinue": "",
+        "einamespace": "",
+        "eidir": "",
+        "eifilterredir": "",
+        "eilimit": ""
+      }
+    },
+    "extlinks": {
+      "description": "",
+      "params": {
+        "ellimit": "",
+        "elcontinue": "",
+        "elprotocol": "",
+        "elquery": "",
+        "elexpandurl": ""
+      }
+    },
+    "exturlusage": {
+      "description": "",
+      "params": {
+        "euprop": "",
+        "eucontinue": "",
+        "euprotocol": "",
+        "euquery": "",
+        "eunamespace": "",
+        "eulimit": "",
+        "euexpandurl": ""
+      }
+    },
+    "filearchive": {
+      "description": "",
+      "params": {
+        "fafrom": "",
+        "fato": "",
+        "faprefix": "",
+        "fadir": "",
+        "fasha1": "",
+        "fasha1base36": "",
+        "faprop": "",
+        "falimit": "",
+        "facontinue": ""
+      }
+    },
+    "filerepoinfo": {
+      "description": "",
+      "params": {
+        "friprop": ""
+      }
+    },
+    "fileusage": {
+      "description": "",
+      "params": {
+        "fuprop": "",
+        "funamespace": "",
+        "fushow": "",
+        "fulimit": "",
+        "fucontinue": ""
+      }
+    },
+    "imageinfo": {
+      "description": "",
+      "params": {
+        "iiprop": "",
+        "iilimit": "",
+        "iistart": "",
+        "iiend": "",
+        "iiurlwidth": "",
+        "iiurlheight": "",
+        "iimetadataversion": "",
+        "iiextmetadatalanguage": "",
+        "iiextmetadatamultilang": "",
+        "iiextmetadatafilter": "",
+        "iiurlparam": "",
+        "iibadfilecontexttitle": "",
+        "iicontinue": "",
+        "iilocalonly": ""
+      }
+    },
+    "images": {
+      "description": "",
+      "params": {
+        "imlimit": "",
+        "imcontinue": "",
+        "imimages": "",
+        "imdir": ""
+      }
+    },
+    "imageusage": {
+      "description": "",
+      "params": {
+        "iutitle": "",
+        "iupageid": "",
+        "iucontinue": "",
+        "iunamespace": "",
+        "iudir": "",
+        "iufilterredir": "",
+        "iulimit": "",
+        "iuredirect": ""
+      }
+    },
+    "info": {
+      "description": "",
+      "params": {
+        "inprop": "",
+        "inlinkcontext": "",
+        "intestactions": "",
+        "intestactionsdetail": "",
+        "intestactionsautocreate": "",
+        "inpreloadcustom": "",
+        "inpreloadparams": "",
+        "inpreloadnewsection": "",
+        "ineditintrostyle": "",
+        "ineditintroskip": "",
+        "ineditintrocustom": "",
+        "incontinue": ""
+      }
+    },
+    "iwbacklinks": {
+      "description": "",
+      "params": {
+        "iwblprefix": "",
+        "iwbltitle": "",
+        "iwblcontinue": "",
+        "iwbllimit": "",
+        "iwblprop": "",
+        "iwbldir": ""
+      }
+    },
+    "iwlinks": {
+      "description": "",
+      "params": {
+        "iwprop": "",
+        "iwprefix": "",
+        "iwtitle": "",
+        "iwdir": "",
+        "iwlimit": "",
+        "iwcontinue": "",
+        "iwurl": ""
+      }
+    },
+    "langbacklinks": {
+      "description": "",
+      "params": {
+        "lbllang": "",
+        "lbltitle": "",
+        "lblcontinue": "",
+        "lbllimit": "",
+        "lblprop": "",
+        "lbldir": ""
+      }
+    },
+    "langlinks": {
+      "description": "",
+      "params": {
+        "llprop": "",
+        "lllang": "",
+        "lltitle": "",
+        "lldir": "",
+        "llinlanguagecode": "",
+        "lllimit": "",
+        "llcontinue": "",
+        "llurl": ""
+      }
+    },
+    "languageinfo": {
+      "description": "",
+      "params": {
+        "liprop": "",
+        "licode": "",
+        "licontinue": ""
+      }
+    },
+    "links": {
+      "description": "",
+      "params": {
+        "plnamespace": "",
+        "pllimit": "",
+        "plcontinue": "",
+        "pltitles": "",
+        "pldir": ""
+      }
+    },
+    "linkshere": {
+      "description": "",
+      "params": {
+        "lhprop": "",
+        "lhnamespace": "",
+        "lhshow": "",
+        "lhlimit": "",
+        "lhcontinue": ""
+      }
+    },
+    "logevents": {
+      "description": "",
+      "params": {
+        "leprop": "",
+        "letype": "",
+        "leaction": "",
+        "lestart": "",
+        "leend": "",
+        "ledir": "",
+        "leuser": "",
+        "letitle": "",
+        "lenamespace": "",
+        "leprefix": "",
+        "letag": "",
+        "lelimit": "",
+        "lecontinue": ""
+      }
+    },
+    "mystashedfiles": {
+      "description": "",
+      "params": {
+        "msfprop": "",
+        "msflimit": "",
+        "msfcontinue": ""
+      }
+    },
+    "pagepropnames": {
+      "description": "",
+      "params": {
+        "ppncontinue": "",
+        "ppnlimit": ""
+      }
+    },
+    "pageprops": {
+      "description": "",
+      "params": {
+        "ppcontinue": "",
+        "ppprop": ""
+      }
+    },
+    "pageswithprop": {
+      "description": "",
+      "params": {
+        "pwppropname": "",
+        "pwpprop": "",
+        "pwpcontinue": "",
+        "pwplimit": "",
+        "pwpdir": ""
+      }
+    },
+    "prefixsearch": {
+      "description": "",
+      "params": {
+        "pssearch": "",
+        "psnamespace": "",
+        "pslimit": "",
+        "psoffset": ""
+      }
+    },
+    "protectedtitles": {
+      "description": "",
+      "params": {
+        "ptnamespace": "",
+        "ptlevel": "",
+        "ptlimit": "",
+        "ptdir": "",
+        "ptstart": "",
+        "ptend": "",
+        "ptprop": "",
+        "ptcontinue": ""
+      }
+    },
+    "querypage": {
+      "description": "",
+      "params": {
+        "qppage": "",
+        "qpoffset": "",
+        "qplimit": ""
+      }
+    },
+    "random": {
+      "description": "",
+      "params": {
+        "rnnamespace": "",
+        "rnfilterredir": "",
+        "rnredirect": "",
+        "rnlimit": "",
+        "rncontinue": ""
+      }
+    },
+    "recentchanges": {
+      "description": "",
+      "params": {
+        "rcstart": "",
+        "rcend": "",
+        "rcdir": "",
+        "rcnamespace": "",
+        "rcuser": "",
+        "rcexcludeuser": "",
+        "rctag": "",
+        "rcprop": "",
+        "rcshow": "",
+        "rclimit": "",
+        "rctype": "",
+        "rctoponly": "",
+        "rctitle": "",
+        "rccontinue": "",
+        "rcgeneraterevisions": "",
+        "rcslot": ""
+      }
+    },
+    "redirects": {
+      "description": "",
+      "params": {
+        "rdprop": "",
+        "rdnamespace": "",
+        "rdshow": "",
+        "rdlimit": "",
+        "rdcontinue": ""
+      }
+    },
+    "revisions": {
+      "description": "",
+      "params": {
+        "rvprop": "",
+        "rvslots": "",
+        "rvlimit": "",
+        "rvexpandtemplates": "",
+        "rvgeneratexml": "",
+        "rvparse": "",
+        "rvsection": "",
+        "rvdiffto": "",
+        "rvdifftotext": "",
+        "rvdifftotextpst": "",
+        "rvcontentformat": "",
+        "rvstartid": "",
+        "rvendid": "",
+        "rvstart": "",
+        "rvend": "",
+        "rvdir": "",
+        "rvuser": "",
+        "rvexcludeuser": "",
+        "rvtag": "",
+        "rvcontinue": ""
+      }
+    },
+    "search": {
+      "description": "",
+      "params": {
+        "srsearch": "",
+        "srnamespace": "",
+        "srlimit": "",
+        "sroffset": "",
+        "srwhat": "",
+        "srinfo": "",
+        "srprop": "",
+        "srinterwiki": "",
+        "srenablerewrites": "",
+        "srsort": ""
+      }
+    },
+    "siteinfo": {
+      "description": "",
+      "params": {
+        "siprop": "",
+        "sifilteriw": "",
+        "sishowalldb": "",
+        "sinumberingroup": "",
+        "siinlanguagecode": ""
+      }
+    },
+    "stashimageinfo": {
+      "description": "",
+      "params": {
+        "siifilekey": "",
+        "siisessionkey": "",
+        "siiprop": "",
+        "siiurlwidth": "",
+        "siiurlheight": "",
+        "siiurlparam": ""
+      }
+    },
+    "tags": {
+      "description": "",
+      "params": {
+        "tgcontinue": "",
+        "tglimit": "",
+        "tgprop": ""
+      }
+    },
+    "templates": {
+      "description": "",
+      "params": {
+        "tlnamespace": "",
+        "tllimit": "",
+        "tlcontinue": "",
+        "tltemplates": "",
+        "tldir": ""
+      }
+    },
+    "tokens": {
+      "description": "",
+      "params": {
+        "type": ""
+      }
+    },
+    "transcludedin": {
+      "description": "",
+      "params": {
+        "tiprop": "",
+        "tinamespace": "",
+        "tishow": "",
+        "tilimit": "",
+        "ticontinue": ""
+      }
+    },
+    "usercontribs": {
+      "description": "",
+      "params": {
+        "uclimit": "",
+        "ucstart": "",
+        "ucend": "",
+        "uccontinue": "",
+        "ucuser": "",
+        "ucuserids": "",
+        "ucuserprefix": "",
+        "uciprange": "",
+        "ucdir": "",
+        "ucnamespace": "",
+        "ucprop": "",
+        "ucshow": "",
+        "uctag": "",
+        "uctoponly": ""
+      }
+    },
+    "userinfo": {
+      "description": "",
+      "params": {
+        "uiprop": "",
+        "uiattachedwiki": ""
+      }
+    },
+    "users": {
+      "description": "",
+      "params": {
+        "usprop": "",
+        "usattachedwiki": "",
+        "ususers": "",
+        "ususerids": ""
+      }
+    },
+    "watchlist": {
+      "description": "",
+      "params": {
+        "wlallrev": "",
+        "wlstart": "",
+        "wlend": "",
+        "wlnamespace": "",
+        "wluser": "",
+        "wlexcludeuser": "",
+        "wldir": "",
+        "wllimit": "",
+        "wlprop": "",
+        "wlshow": "",
+        "wltype": "",
+        "wlowner": "",
+        "wltoken": "",
+        "wlcontinue": ""
+      }
+    },
+    "watchlistraw": {
+      "description": "",
+      "params": {
+        "wrcontinue": "",
+        "wrnamespace": "",
+        "wrlimit": "",
+        "wrprop": "",
+        "wrshow": "",
+        "wrowner": "",
+        "wrtoken": "",
+        "wrdir": "",
+        "wrfromtitle": "",
+        "wrtotitle": ""
+      }
+    }
+  }
+}
